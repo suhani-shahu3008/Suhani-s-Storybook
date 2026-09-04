@@ -41,7 +41,7 @@ export const Default: Story = {
     capacity: 'Capacity',
     assignedDriver: 'Assigned Driver',
     status: 'Info',
-    rowCount: 10,
+    rowCount: 1,
   },
   render: (args) => (
     <div style={{ padding: '24px', background: '#FFFFFF' }}>
