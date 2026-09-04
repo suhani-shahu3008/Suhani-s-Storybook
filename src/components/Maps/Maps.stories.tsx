@@ -12,20 +12,8 @@ const meta: Meta<typeof Maps> = {
 export default meta;
 type Story = StoryObj<typeof Maps>;
 
-export const Compact: Story = {
-  args: {
-    size: 'Compact'
-  }
-};
-
-export const Standard: Story = {
+export const Default: Story = {
   args: {
     size: 'Standard'
-  }
-};
-
-export const Wide: Story = {
-  args: {
-    size: 'Wide'
   }
 };
