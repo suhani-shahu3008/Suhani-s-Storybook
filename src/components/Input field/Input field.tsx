@@ -147,9 +147,16 @@ export const InputField: React.FC<InputFieldProps> = ({
               <span className="uedp-input-field__text uedp-input-field__text--filled">{value}</span>
             )}
 
-            {isError && (
-              <span className="uedp-input-field__text uedp-input-field__text--error">{errorValue}</span>
-            )}
+            {isError && (() => {
+              const hasStar = errorValue.endsWith('*');
+              const baseText = hasStar ? errorValue.slice(0, -1) : errorValue;
+              return (
+                <span className="uedp-input-field__text uedp-input-field__text--error">
+                  <span className="uedp-input-field__text-underline">{baseText}</span>
+                  {hasStar && <span className="uedp-input-field__text-star">*</span>}
+                </span>
+              );
+            })()}
 
             {!isTyping && !isFilled && !isError && (
               <input

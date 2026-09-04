@@ -181,8 +181,15 @@
 
 .uedp-input-field__text--error {
   color: #DC2626; /* VariableID:1:436 */
+}
+
+.uedp-input-field__text-underline {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.uedp-input-field__text-star {
+  text-decoration: none;
 }
 
 /* =============================================================
