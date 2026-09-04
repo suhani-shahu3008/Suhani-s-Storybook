@@ -326,7 +326,7 @@ const NAV_BAR_CSS = `
 .uedp-side-nav__sub-menu-stack {
   display: flex;
   flex-direction: column;
-  margin-left: 8px;
+  margin-left: 24px;
 }
 
 .uedp-side-nav__sub-menu-stack > *:not(:first-child) {
