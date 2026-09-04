@@ -44,12 +44,10 @@ export interface NavigationBarProps {
   /** COUNT (Side Navigation Bar only): 1-6 stacked items. For Menu Type=Sub Menu
    *  this is the number of sub-menu rows nested under the parent item. */
   count?: NavigationBarCount;
-  /** ACTIVE ITEM (Side Navigation Bar, Menu Type=Menu only): 1-based index of
-   *  the stacked item that shows `state`. All other items stay Default. */
-  activeIndex?: number;
-  /** ACTIVE MENU ITEM (Menu Type=Sub Menu only): which of the two Menu-type
-   *  rows shows `state` — 0 = top parent item, 1 = trailing sibling item. */
-  activeMenuIndex?: 0 | 1;
+  /** ACTIVE MENU ITEM: 1-based index of the Menu-type item that shows `state`.
+   *  For the plain stack (Menu Type=Menu) this is the stacked item index.
+   *  For Menu Type=Sub Menu: 1 = top parent item, 2 = trailing sibling item. */
+  activeMenuIndex?: number;
   /** ACTIVE SUB-MENU ITEM (Menu Type=Sub Menu only): 1-based index of the
    *  sub-menu row that shows `state`. Independent from activeMenuIndex, so a
    *  Menu row and a Sub Menu row can be active at the same time. */
@@ -423,7 +421,6 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({
   text = 'Dashboard',
   frame = false,
   count,
-  activeIndex,
   activeMenuIndex,
   activeSubMenuIndex,
   onClick,
@@ -440,26 +437,24 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({
 
   const n = count ?? 1;
   /** 1-based index gets `state`; every other stacked item stays Default. */
-  const stateFor = (position: number): NavigationBarState => (activeIndex === position ? state : 'Default');
+  const menuStateFor = (position: number): NavigationBarState => (activeMenuIndex === position ? state : 'Default');
 
   // Side Navigation Bar - Expanded (Sub menu) — Figma 41:4756
   if (type === 'Expanded' && menuType === 'Sub Menu') {
-    /** Menu-row state (parent=0, trailing sibling=1) — independent from the sub-menu rows. */
-    const menuStateFor = (position: 0 | 1): NavigationBarState => (activeMenuIndex === position ? state : 'Default');
     /** Sub-menu-row state (1-based) — independent from the Menu rows above/below. */
     const subMenuStateFor = (position: number): NavigationBarState => (activeSubMenuIndex === position ? state : 'Default');
 
     return (
       <div className={['uedp-side-nav', 'uedp-side-nav--sub-menu-group', frame ? 'uedp-side-nav--framed' : '', className].filter(Boolean).join(' ')}>
         <div>
-          <NavBarItem state={menuStateFor(0)} type="Expanded" menuType="Menu" icon={icon} text={text} />
+          <NavBarItem state={menuStateFor(1)} type="Expanded" menuType="Menu" icon={icon} text={text} />
           <div className="uedp-side-nav__sub-menu-stack">
             {Array.from({ length: n }).map((_, i) => (
               <NavBarItem key={i} state={subMenuStateFor(i + 1)} type="Expanded" menuType="Sub Menu" icon={icon} text={text} />
             ))}
           </div>
         </div>
-        <NavBarItem state={menuStateFor(1)} type="Expanded" menuType="Menu" icon={icon} text={text} />
+        <NavBarItem state={menuStateFor(2)} type="Expanded" menuType="Menu" icon={icon} text={text} />
       </div>
     );
   }
@@ -479,7 +474,7 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({
         .join(' ')}
     >
       {Array.from({ length: n }).map((_, i) => (
-        <NavBarItem key={i} state={stateFor(i + 1)} type={type} menuType="Menu" icon={icon} text={text} />
+        <NavBarItem key={i} state={menuStateFor(i + 1)} type={type} menuType="Menu" icon={icon} text={text} />
       ))}
     </div>
   );
@@ -535,15 +530,10 @@ const meta: Meta<typeof NavigationBar> = {
       options: [1, 2, 3, 4, 5, 6],
       description: 'COUNT (Side Navigation Bar): 1-6 stacked items (Sub Menu: number of sub-menu rows)'
     },
-    activeIndex: {
-      control: 'select',
-      options: [undefined, 1, 2, 3, 4, 5, 6, 7],
-      description: 'ACTIVE ITEM (Menu Type=Menu only): 1-based index of the stacked item that shows State — every other item stays Default'
-    },
     activeMenuIndex: {
       control: 'select',
-      options: [undefined, 0, 1],
-      description: 'ACTIVE MENU ITEM (Menu Type=Sub Menu only): 0 = top parent item, 1 = trailing sibling item'
+      options: [undefined, 1, 2, 3, 4, 5, 6, 7],
+      description: 'ACTIVE MENU ITEM: 1-based index of the stacked Menu item that shows State (plain stack), or 1 = top parent item / 2 = trailing sibling item (Sub Menu)'
     },
     activeSubMenuIndex: {
       control: 'select',
@@ -621,7 +611,7 @@ export const TypeComparison: Story = {
 export const SideNavCollapsed: Story = {
   name: 'Side Nav — Collapsed',
   render: (args) => <NavigationBar {...args} />,
-  args: { type: 'Collapsed', frame: true, count: 4, state: 'Focus', activeIndex: 2 },
+  args: { type: 'Collapsed', frame: true, count: 4, state: 'Focus', activeMenuIndex: 2 },
 };
 
 export const SideNavCollapsedAllCounts: Story = {
@@ -653,7 +643,7 @@ export const SideNavCollapsedAllCounts: Story = {
 export const SideNavExpanded: Story = {
   name: 'Side Nav — Expanded',
   render: (args) => <NavigationBar {...args} />,
-  args: { type: 'Expanded', menuType: 'Menu', frame: true, count: 4, state: 'Focus', activeIndex: 2 },
+  args: { type: 'Expanded', menuType: 'Menu', frame: true, count: 4, state: 'Focus', activeMenuIndex: 2 },
 };
 
 export const SideNavExpandedAllCounts: Story = {

@@ -23,7 +23,7 @@ export function App() {
         text="Dashboard"
         frame
         count={6}
-        activeIndex={1}
+        activeMenuIndex={1}
         onClick={() => setCollapsed(prev => !prev)}
       />
 
