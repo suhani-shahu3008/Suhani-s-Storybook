@@ -1973,112 +1973,112 @@ export const SemanticPalette2Tokens = {
     },
   },
   "feedback": {
-    "background": {
+    "success-background": {
       "figmaName": "Feedback/Success/Background",
       "light": "#DCFCE7",
       "dark": "#14532D",
       "varName": "--uedp-sem2-feedback-success-background",
       "varNameDark": "--uedp-sem2-feedback-success-background-dark"
     },
-    "text": {
+    "success-text": {
       "figmaName": "Feedback/Success/Text",
       "light": "#15803D",
       "dark": "#86EFAC",
       "varName": "--uedp-sem2-feedback-success-text",
       "varNameDark": "--uedp-sem2-feedback-success-text-dark"
     },
-    "icon": {
+    "success-icon": {
       "figmaName": "Feedback/Success/Icon",
       "light": "#22C55E",
       "dark": "#4ADE80",
       "varName": "--uedp-sem2-feedback-success-icon",
       "varNameDark": "--uedp-sem2-feedback-success-icon-dark"
     },
-    "border": {
+    "success-border": {
       "figmaName": "Feedback/Success/Border",
       "light": "#22C55E",
       "dark": "#22C55E",
       "varName": "--uedp-sem2-feedback-success-border",
       "varNameDark": "--uedp-sem2-feedback-success-border-dark"
     },
-    "background": {
+    "error-background": {
       "figmaName": "Feedback/Error/Background",
       "light": "#FEE2E2",
       "dark": "#7F1D1D",
       "varName": "--uedp-sem2-feedback-error-background",
       "varNameDark": "--uedp-sem2-feedback-error-background-dark"
     },
-    "text": {
+    "error-text": {
       "figmaName": "Feedback/Error/Text",
       "light": "#B91C1C",
       "dark": "#FCA5A5",
       "varName": "--uedp-sem2-feedback-error-text",
       "varNameDark": "--uedp-sem2-feedback-error-text-dark"
     },
-    "icon": {
+    "error-icon": {
       "figmaName": "Feedback/Error/Icon",
       "light": "#DC2626",
       "dark": "#EF4444",
       "varName": "--uedp-sem2-feedback-error-icon",
       "varNameDark": "--uedp-sem2-feedback-error-icon-dark"
     },
-    "border": {
+    "error-border": {
       "figmaName": "Feedback/Error/Border",
       "light": "#DC2626",
       "dark": "#EF4444",
       "varName": "--uedp-sem2-feedback-error-border",
       "varNameDark": "--uedp-sem2-feedback-error-border-dark"
     },
-    "background": {
+    "warning-background": {
       "figmaName": "Feedback/Warning/Background",
       "light": "#FFEDD5",
       "dark": "#7C2D12",
       "varName": "--uedp-sem2-feedback-warning-background",
       "varNameDark": "--uedp-sem2-feedback-warning-background-dark"
     },
-    "text": {
+    "warning-text": {
       "figmaName": "Feedback/Warning/Text",
       "light": "#C2410C",
       "dark": "#FDBA74",
       "varName": "--uedp-sem2-feedback-warning-text",
       "varNameDark": "--uedp-sem2-feedback-warning-text-dark"
     },
-    "icon": {
+    "warning-icon": {
       "figmaName": "Feedback/Warning/Icon",
       "light": "#F97316",
       "dark": "#FB923C",
       "varName": "--uedp-sem2-feedback-warning-icon",
       "varNameDark": "--uedp-sem2-feedback-warning-icon-dark"
     },
-    "border": {
+    "warning-border": {
       "figmaName": "Feedback/Warning/Border",
       "light": "#F97316",
       "dark": "#FB923C",
       "varName": "--uedp-sem2-feedback-warning-border",
       "varNameDark": "--uedp-sem2-feedback-warning-border-dark"
     },
-    "background": {
+    "info-background": {
       "figmaName": "Feedback/Info/Background",
       "light": "#DBEAFE",
       "dark": "#1E3A8A",
       "varName": "--uedp-sem2-feedback-info-background",
       "varNameDark": "--uedp-sem2-feedback-info-background-dark"
     },
-    "text": {
+    "info-text": {
       "figmaName": "Feedback/Info/Text",
       "light": "#1D4ED8",
       "dark": "#93C5FD",
       "varName": "--uedp-sem2-feedback-info-text",
       "varNameDark": "--uedp-sem2-feedback-info-text-dark"
     },
-    "icon": {
+    "info-icon": {
       "figmaName": "Feedback/Info/Icon",
       "light": "#1D4ED8",
       "dark": "#3B82F6",
       "varName": "--uedp-sem2-feedback-info-icon",
       "varNameDark": "--uedp-sem2-feedback-info-icon-dark"
     },
-    "border": {
+    "info-border": {
       "figmaName": "Feedback/Info/Border",
       "light": "#1D4ED8",
       "dark": "#3B82F6",

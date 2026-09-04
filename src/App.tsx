@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './styles/figma-tokens.css';
 import { Header } from './components/Header/Header';
-import { SideNavBarExpanded } from './components/Side Navigation Bar - Expanded/Side Navigation Bar - Expanded';
-import { SideNavBarCollapsed } from './components/Side Navigation Bar - Collapsed/Side Navigation Bar - Collapsed';
+import { NavigationBar } from './components/Navigation Bar/NavigationBar.stories';
 import { Cards } from './components/Cards/Cards';
 import { Table } from './components/Table/Table';
 import { DeliveryTrendsCard } from './components/Delivery trends card/Delivery trends card';
@@ -17,23 +16,17 @@ import { ProcessBar } from './components/Process bar/Process bar';
 
 export function App() {
   const [collapsed, setCollapsed] = useState(false);
-  const [activeNav, setActiveNav] = useState('dashboard');
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--uedp-slate-100)', fontFamily: 'var(--uedp-font-family)' }}>
-      {collapsed ? (
-        <SideNavBarCollapsed
-          activeId={activeNav}
-          onSelect={setActiveNav}
-          onExpand={() => setCollapsed(false)}
-        />
-      ) : (
-        <SideNavBarExpanded
-          activeId={activeNav}
-          onSelect={setActiveNav}
-          onCollapse={() => setCollapsed(true)}
-        />
-      )}
+      <NavigationBar
+        type={collapsed ? 'Collapsed' : 'Expanded'}
+        text="Dashboard"
+        frame
+        count={6}
+        activeIndex={1}
+        onClick={() => setCollapsed(prev => !prev)}
+      />
 
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflowX: 'hidden' }}>
         <Header />
@@ -41,17 +34,22 @@ export function App() {
         <main style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '1600px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
           {/* Top KPI Cards Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
-            <Cards title="Active Vehicles" metric="1,420" change="+12.5%" isPositive={true} icon="🚚" />
-            <Cards title="On-Time Delivery Rate" metric="96.4%" change="+2.1%" isPositive={true} icon="⏱️" />
-            <Cards title="Avg Turnaround Time" metric="24.8 mins" change="-14.2%" isPositive={true} icon="⚡" />
-            <Cards title="High Delay Alerts" metric="14" change="+3" isPositive={false} icon="⚠️" />
+            <Cards type="Card 1" title="Active Vehicles" value="1,420" change="+12.5% from last month" />
+            <Cards type="Card 2" title="On-Time Delivery Rate" value="96.4%" change="+2.1% from last month" />
+            <Cards type="Card 3" title="Avg Turnaround Time" value="24.8 mins" change="-14.2% from last month" />
+            <Cards type="Card 4" title="High Delay Alerts" value="14" change="+3 from last month" />
           </div>
 
           {/* Navigation Tab Bar */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <TabBars tabs={['Live Map & Telemetry', 'Active Manifest', 'Delay Diagnostics', 'Fleet Analytics']} />
+            <TabBars
+              prop1stText="Live Map & Telemetry"
+              prop2ndText="Active Manifest"
+              prop3rdText="Delay Diagnostics"
+              prop4thText="Fleet Analytics"
+            />
             <div style={{ width: '300px' }}>
-              <ProcessBar progress={82} label="Daily Delivery Target" />
+              <ProcessBar process={82} label="Daily Delivery Target" />
             </div>
           </div>
 

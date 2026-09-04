@@ -1,53 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Table.css';
 import { TableHeader } from '../Table Header/Table Header';
 import { TableHeaderRow } from '../Table Header Row/Table Header Row';
 import { TableRow } from '../Table Row/Table Row';
+import type { TableRowStatus } from '../Table Row/Table Row';
 import { PaginationRow } from '../Pagination Row/Pagination Row';
 
 export interface TableProps {
   title?: string;
 }
 
+const rows: { id: string; vehicleId: string; type: string; model: string; capacity: string; assignedDriver: string; status: TableRowStatus }[] = [
+  { id: 'TRK-8821-E', vehicleId: 'TRK-8821-E', type: 'Heavy Freight', model: 'Ashok Leyland 1616', capacity: '16 Ton', assignedDriver: 'Rajesh Kumar', status: 'Success' },
+  { id: 'VAN-4412-A', vehicleId: 'VAN-4412-A', type: 'Express Van', model: 'Tata Ace', capacity: '1 Ton', assignedDriver: 'Amit Verma', status: 'Warning' },
+  { id: 'COLD-9910-R', vehicleId: 'COLD-9910-R', type: 'Refrigerated Cold', model: 'Eicher Pro 3015', capacity: '5 Ton', assignedDriver: 'Sunil Mehta', status: 'Error' },
+  { id: 'VAN-2201-B', vehicleId: 'VAN-2201-B', type: 'Local Dispatch', model: 'Mahindra Bolero Pickup', capacity: '1.5 Ton', assignedDriver: 'Priya Sharma', status: 'Success' },
+  { id: 'TRK-1099-H', vehicleId: 'TRK-1099-H', type: 'Long Haul Truck', model: 'Ashok Leyland 3123', capacity: '25 Ton', assignedDriver: 'Vikram Singh', status: 'Info' },
+];
+
 export const Table: React.FC<TableProps> = ({
   title = 'Live Fleet Logistics Manifest'
 }) => {
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
-
-  const rows = [
-    { id: 'SHP-101', driverName: 'Rajesh Kumar', driverInitials: 'RK', driverRole: 'Heavy Freight', vehicleId: 'TRK-8821-E', route: 'Mumbai ➔ Pune (Expressway)', status: 'Success' as const, statusLabel: 'On Schedule', eta: '14:30 PM (25m)' },
-    { id: 'SHP-102', driverName: 'Amit Verma', driverInitials: 'AV', driverRole: 'Express Van', vehicleId: 'VAN-4412-A', route: 'Delhi ➔ Gurugram (NH-48)', status: 'Warning' as const, statusLabel: 'Congested +15m', eta: '15:10 PM (+15m)' },
-    { id: 'SHP-103', driverName: 'Sunil Mehta', driverInitials: 'SM', driverRole: 'Refrigerated Cold', vehicleId: 'COLD-9910-R', route: 'Bengaluru ➔ Mysuru', status: 'Error' as const, statusLabel: 'Delayed +45m', eta: '17:00 PM (+45m)' },
-    { id: 'SHP-104', driverName: 'Priya Sharma', driverInitials: 'PS', driverRole: 'Local Dispatch', vehicleId: 'VAN-2201-B', route: 'Hyderabad ➔ Secunderabad', status: 'Success' as const, statusLabel: 'Delivered', eta: 'Completed' },
-    { id: 'SHP-105', driverName: 'Vikram Singh', driverInitials: 'VS', driverRole: 'Long Haul Truck', vehicleId: 'TRK-1099-H', route: 'Ahmedabad ➔ Surat', status: 'Info' as const, statusLabel: 'In Transit', eta: '16:45 PM (1h 10m)' }
-  ];
-
-  const handleToggle = (id: string) => {
-    setSelectedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
-  };
-
-  const handleSelectAll = (checked: boolean) => {
-    setSelectedIds(checked ? rows.map(r => r.id) : []);
-  };
-
   return (
     <div className="uedp-table-card">
-      <TableHeader title={title} count={rows.length} />
-      <TableHeaderRow
-        selectAll={selectedIds.length === rows.length}
-        onSelectAll={handleSelectAll}
-      />
+      <TableHeader title={title} />
+      <TableHeaderRow />
       <div className="uedp-table-card__body">
         {rows.map(r => (
           <TableRow
             key={r.id}
-            {...r}
-            selected={selectedIds.includes(r.id)}
-            onSelect={handleToggle}
+            vehicleId={r.vehicleId}
+            type={r.type}
+            model={r.model}
+            capacity={r.capacity}
+            assignedDriver={r.assignedDriver}
+            status={r.status}
           />
         ))}
       </div>
-      <PaginationRow totalItems={1248} currentPage={1} itemsPerPage={5} />
+      <PaginationRow recordsLabel={`Showing 1 to ${rows.length} of ${rows.length} records`} pageNumber={1} />
     </div>
   );
 };

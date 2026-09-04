@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Cards } from './Cards';
 import { ICONOGRAPHY_NAMES } from '../Iconography/Iconography';
