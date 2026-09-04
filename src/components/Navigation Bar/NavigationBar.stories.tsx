@@ -383,8 +383,10 @@ const NavBarItem: React.FC<{
       {isSubMenu ? (
         /* Sub Menu: connector line + pill (icon 30×30 + text), 154×56px */
         <>
-          <svg className="uedp-nav-bar__connector" width="27" height="41" viewBox="0 0 27 41" fill="none">
-            <path d="M2 0V27C2 32.5228 6.47715 37 12 37H27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg className="uedp-nav-bar__connector" width="32" height="41" viewBox="0 0 32 41" fill="none">
+            {/* Starts at x=30 (below the parent item's 60px-wide icon center) and sweeps
+                down-left to rejoin the original corner curve feeding into the pill row. */}
+            <path d="M30 0C30 15 2 12 2 27C2 32.5228 6.47715 37 12 37H27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <div className="uedp-nav-bar__sub-menu-pill">
             <div className="uedp-nav-bar__sub-menu-icon">
