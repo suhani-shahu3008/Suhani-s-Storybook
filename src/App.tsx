@@ -3,7 +3,6 @@ import './styles/figma-tokens.css';
 import { Header } from './components/Header/Header';
 import { NavigationBar } from './components/Navigation Bar/NavigationBar.stories';
 import { Cards } from './components/Cards/Cards';
-import { Table } from './components/Table/Table';
 import { DeliveryTrendsCard } from './components/Delivery trends card/Delivery trends card';
 import { DelayReasonsCard } from './components/Delay Reasons card/Delay Reasons card';
 import { TopDelayedZonesCard } from './components/Top Delayed Zones card/Top Delayed Zones card';
@@ -71,9 +70,6 @@ export function App() {
             <DelayReasonsCard />
             <TopDelayedZonesCard />
           </div>
-
-          {/* Main Table */}
-          <Table />
         </main>
       </div>
     </div>
