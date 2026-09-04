@@ -21,6 +21,10 @@ const meta: Meta<typeof TableRow> = {
       control: 'select',
       options: ['Info', 'Error', 'Warning', 'Success', 'Inactive'],
       description: 'Status Tag Type variant (50×22px capsule)'
+    },
+    rowCount: {
+      control: 'number',
+      description: 'How many rows to render (repeats this row) — any number'
     }
   }
 };
@@ -37,6 +41,7 @@ export const Default: Story = {
     capacity: 'Capacity',
     assignedDriver: 'Assigned Driver',
     status: 'Info',
+    rowCount: 10,
   },
   render: (args) => (
     <div style={{ padding: '24px', background: '#FFFFFF' }}>

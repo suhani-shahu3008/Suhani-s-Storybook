@@ -60,6 +60,8 @@ export interface TableRowProps {
   onEdit?: () => void;
   /** Click handler: Delete action icon (id: 179:1502) */
   onDelete?: () => void;
+  /** How many rows to render (repeats this row) — any number, defaults to 1 */
+  rowCount?: number;
   className?: string;
 }
 
@@ -107,8 +109,31 @@ export const TableRow: React.FC<TableRowProps> = ({
   onView,
   onEdit,
   onDelete,
+  rowCount       = 1,
   className      = '',
 }) => {
+  if (rowCount > 1) {
+    return (
+      <>
+        {Array.from({ length: rowCount }).map((_, i) => (
+          <TableRow
+            key={i}
+            vehicleId={vehicleId}
+            type={type}
+            model={model}
+            capacity={capacity}
+            assignedDriver={assignedDriver}
+            status={status}
+            onView={onView}
+            onEdit={onEdit}
+            onDelete={onDelete}
+            className={className}
+          />
+        ))}
+      </>
+    );
+  }
+
   return (
     <div className={`uedp-tr ${className}`}>
       {/* Vehicle ID Cell — id: 179:1486 */}
