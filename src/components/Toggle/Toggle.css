@@ -1,0 +1,206 @@
+/* ======================================================================
+   Figma Node: 56:6962 — Toggle Component Set
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-toggle-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+}
+
+.uedp-toggle-wrapper:has(.uedp-toggle--state-disabled) {
+  cursor: not-allowed;
+}
+
+/* =============================================================
+   TOGGLE CONTAINER
+   ============================================================= */
+.uedp-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.uedp-toggle__native-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* =============================================================
+   TRACK (52×32px, r:100)
+   ============================================================= */
+.uedp-toggle__track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 52px;
+  min-width: 52px;
+  height: 32px;
+  min-height: 32px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  position: relative;
+  padding: 0 4px;
+}
+
+/* Checked on right */
+.uedp-toggle--checked .uedp-toggle__track {
+  justify-content: flex-end;
+}
+
+/* Unchecked on left */
+.uedp-toggle--unchecked .uedp-toggle__track {
+  justify-content: flex-start;
+  background-color: #E5E5E5; /* VariableID:1:366 (neutral-200) */
+}
+
+/* ── Track Colors per Type & State ───────────────────────── */
+/* Type: Primary (Blue) */
+.uedp-toggle--type-primary.uedp-toggle--checked .uedp-toggle__track {
+  background-color: #1D4ED8; /* VariableID:1:503 (blue-700) */
+}
+.uedp-toggle--type-primary.uedp-toggle--checked.uedp-toggle--state-disabled .uedp-toggle__track {
+  background-color: #E5E5E5; /* VariableID:1:366 (neutral-200) */
+}
+
+/* Type: Success (Green) */
+.uedp-toggle--type-success.uedp-toggle--checked .uedp-toggle__track {
+  background-color: #22C55E; /* VariableID:1:466 (green-500) */
+}
+.uedp-toggle--type-success.uedp-toggle--checked.uedp-toggle--state-disabled .uedp-toggle__track {
+  background-color: #E5E5E5;
+}
+
+/* =============================================================
+   THUMB CONTAINER & STATE LAYER HALO
+   ============================================================= */
+.uedp-toggle__thumb-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.uedp-toggle--state-pressed .uedp-toggle__thumb-container {
+  width: 28px;
+  height: 28px;
+}
+
+/* Halo Circle */
+.uedp-toggle__halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: transparent;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Hovered State Halo */
+.uedp-toggle--type-primary.uedp-toggle--state-hovered .uedp-toggle__halo {
+  background-color: rgba(29, 78, 216, 0.15);
+}
+.uedp-toggle--type-success.uedp-toggle--state-hovered .uedp-toggle__halo {
+  background-color: rgba(34, 197, 94, 0.15);
+}
+
+/* Focused State Halo (Figma: State-layer with 10% opacity) */
+.uedp-toggle--type-primary.uedp-toggle--state-focused .uedp-toggle__halo {
+  background-color: rgba(29, 78, 216, 0.2);
+}
+.uedp-toggle--type-success.uedp-toggle--state-focused .uedp-toggle__halo {
+  background-color: rgba(34, 197, 94, 0.2);
+}
+
+/* Pressed State Halo */
+.uedp-toggle--type-primary.uedp-toggle--state-pressed .uedp-toggle__halo {
+  background-color: rgba(29, 78, 216, 0.25);
+}
+.uedp-toggle--type-success.uedp-toggle--state-pressed .uedp-toggle__halo {
+  background-color: rgba(34, 197, 94, 0.25);
+}
+
+/* =============================================================
+   THUMB / HANDLE SHAPE (24×24px, Pressed: 28×28px, r:24)
+   ============================================================= */
+.uedp-toggle__thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Enabled Thumb: #FFFFFF */
+.uedp-toggle--checked.uedp-toggle--state-enabled .uedp-toggle__thumb {
+  background-color: #FFFFFF;
+}
+
+/* Hovered / Focused / Pressed Primary Thumb: #DBEAFE */
+.uedp-toggle--type-primary.uedp-toggle--checked.uedp-toggle--state-hovered .uedp-toggle__thumb,
+.uedp-toggle--type-primary.uedp-toggle--checked.uedp-toggle--state-focused .uedp-toggle__thumb,
+.uedp-toggle--type-primary.uedp-toggle--checked.uedp-toggle--state-pressed .uedp-toggle__thumb {
+  background-color: #DBEAFE; /* VariableID:1:499 (blue-100) */
+}
+
+/* Hovered / Focused / Pressed Success Thumb: #DCFCE7 */
+.uedp-toggle--type-success.uedp-toggle--checked.uedp-toggle--state-hovered .uedp-toggle__thumb,
+.uedp-toggle--type-success.uedp-toggle--checked.uedp-toggle--state-focused .uedp-toggle__thumb,
+.uedp-toggle--type-success.uedp-toggle--checked.uedp-toggle--state-pressed .uedp-toggle__thumb {
+  background-color: #DCFCE7; /* VariableID:1:462 (green-100) */
+}
+
+/* State: Pressed (Thumb: 28×28px) */
+.uedp-toggle--state-pressed .uedp-toggle__thumb {
+  width: 28px;
+  height: 28px;
+}
+
+/* State: Disabled Thumb: #FAFAFA */
+.uedp-toggle--state-disabled .uedp-toggle__thumb {
+  background-color: #FAFAFA; /* VariableID:1:364 (neutral-50) */
+}
+
+/* Unchecked Thumb */
+.uedp-toggle--unchecked .uedp-toggle__thumb {
+  background-color: #FFFFFF;
+  border: 1px solid #D4D4D4;
+}
+
+/* =============================================================
+   OPTIONAL LABEL TEXT
+   ============================================================= */
+.uedp-toggle__label-text {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.88px;
+  color: #171717; /* VariableID:1:373 (neutral-900) */
+}
+
+.uedp-toggle-wrapper:has(.uedp-toggle--state-disabled) .uedp-toggle__label-text {
+  color: #A3A3A3; /* VariableID:1:368 */
+}

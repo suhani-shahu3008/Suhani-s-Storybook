@@ -1,0 +1,115 @@
+/* ======================================================================
+   Figma Node: 65:7696 — Tags Component Set
+   5 Variants: Type (Info, Error, Warning, Success, Inactive)
+   All values extracted directly from Figma layers & bound variables.
+
+   DIMENSIONS (all variants):
+   - Size: 38×24px
+   - Border Radius: 9999px (full pill capsule)
+   - Padding: 10px all sides (L:10 R:10 T:10 B:10)
+   - Layout: HORIZONTAL (flex row)
+
+   TEXT (child node "Tags"):
+   - Font: Lufga Light, fontWeight: 300
+   - Font Size: 8px
+   - Line Height: 10.44px
+   - textAlignHorizontal: LEFT  textAlignVertical: CENTER
+   - letterSpacing: 0
+
+   COLOR TABLE:
+   Info:     bg #DBECFE  text #1D4ED8  (VariableID:1:497 / VariableID:1:503)
+   Error:    bg #FEE2E2  text #DC2626  (VariableID:1:387 / VariableID:1:392)
+   Warning:  bg #FFEDD5  text #F97316  (VariableID:1:398 / VariableID:1:402)
+   Success:  bg #DCFCE7  text #22C55E  (VariableID:1:442 / VariableID:1:446)
+   Inactive: bg #F5F5F5  text #171717  (VariableID:1:365 / VariableID:1:373)
+   ====================================================================== */
+
+/* =============================================================
+   TAG CONTAINER
+   38×24px, border-radius: 9999px, padding: 10px all sides
+   ============================================================= */
+.uedp-tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 24px;
+  border-radius: 9999px;
+  padding: 10px 10px 10px 10px;   /* L:10 R:10 T:10 B:10 */
+  box-sizing: border-box;
+}
+
+/* =============================================================
+   TAG TEXT
+   Lufga Light 300, 8px, lineHeight 10.44px, letterSpacing 0
+   ============================================================= */
+.uedp-tag__text {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-weight: 300;       /* Lufga-Light */
+  font-size: 8px;
+  line-height: 10.44px;   /* lineHeightPx: 10.4399995803833 */
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* =============================================================
+   TYPE=INFO
+   bg fill: #DBECFE (VariableID:1:497)
+   text:    #1D4ED8 (VariableID:1:503 blue-700)
+   ============================================================= */
+.uedp-tag--type-info {
+  background-color: #DBECFE;
+}
+.uedp-tag--type-info .uedp-tag__text {
+  color: #1D4ED8;
+}
+
+/* =============================================================
+   TYPE=ERROR
+   bg fill: #FEE2E2 (VariableID:1:387 red-100)
+   text:    #DC2626 (VariableID:1:392 red-600)
+   ============================================================= */
+.uedp-tag--type-error {
+  background-color: #FEE2E2;
+}
+.uedp-tag--type-error .uedp-tag__text {
+  color: #DC2626;
+}
+
+/* =============================================================
+   TYPE=WARNING
+   bg fill: #FFEDD5 (VariableID:1:398 orange-100)
+   text:    #F97316 (r:0.976 g:0.451 b:0.086 — VariableID:1:402 orange-500)
+   ============================================================= */
+.uedp-tag--type-warning {
+  background-color: #FFEDD5;
+}
+.uedp-tag--type-warning .uedp-tag__text {
+  color: #F97316;
+}
+
+/* =============================================================
+   TYPE=SUCCESS
+   bg fill: #DCFCE7 (VariableID:1:442 green-100)
+   text:    #22C55E (VariableID:1:446 green-500)
+   ============================================================= */
+.uedp-tag--type-success {
+  background-color: #DCFCE7;
+}
+.uedp-tag--type-success .uedp-tag__text {
+  color: #22C55E;
+}
+
+/* =============================================================
+   TYPE=INACTIVE
+   bg fill: #F5F5F5 (VariableID:1:365 neutral-100)
+   text:    #171717 (r:0.090 — VariableID:1:373 neutral-900)
+   ============================================================= */
+.uedp-tag--type-inactive {
+  background-color: #F5F5F5;
+}
+.uedp-tag--type-inactive .uedp-tag__text {
+  color: #171717;
+}

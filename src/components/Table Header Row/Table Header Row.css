@@ -1,0 +1,56 @@
+/* ======================================================================
+   Figma Node: 179:1512 — Table Header Row Component Set
+   Variant=Header (id: 179:1470)
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+/* =============================================================
+   ROW CONTAINER
+   Figma: 1488×40px, HORIZONTAL layout, counterAxisAlignItems: CENTER
+   fill: #F5F5F5 (rgba(245,245,245,1) / VariableID:1:365)
+   border-radius: 12px (VariableID:1:579)
+   padding: 12px 36px (VariableID:1:613 top/bottom, VariableID:1:620 left/right)
+   ============================================================= */
+.uedp-thr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1488px;
+  height: 40px;
+  min-height: 40px;
+  padding: 12px 36px;
+  background-color: #F5F5F5; /* rgba(245,245,245,1) / VariableID:1:365 */
+  border-radius: 12px;       /* VariableID:1:579 */
+  box-sizing: border-box;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  user-select: none;
+}
+
+/* =============================================================
+   COLUMN HEADER CELL
+   Figma: each cell FILL width, HUG height, HORIZONTAL layout
+   Cell dimensions: 202.3×16px each (7 cells × ~202px = 1416px inner)
+   ============================================================= */
+.uedp-thr__cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* =============================================================
+   COLUMN LABEL TEXT
+   Figma: Lufga 12px w400, color #171717 (VariableID:1:373)
+   lineHeight: 15.66px, textAlignHorizontal: LEFT
+   ============================================================= */
+.uedp-thr__label {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.66px;
+  color: #171717; /* rgba(23,23,23,1) / VariableID:1:373 */
+  text-align: left;
+  white-space: nowrap;
+}

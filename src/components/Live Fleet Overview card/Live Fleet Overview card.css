@@ -1,0 +1,61 @@
+/* Live Fleet Overview card.css — Figma Node ID: 88:11235 */
+.uedp-live-fleet-card {
+  width: 755px;
+  box-sizing: border-box;
+  background: var(--uedp-base-white);
+  border-radius: 24px;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--uedp-font-family);
+}
+
+.uedp-live-fleet-card__header {
+  display: flex;
+  align-items: center;
+}
+
+.uedp-live-fleet-card__title {
+  margin: 0;
+  font: var(--uedp-font-h3-regular);
+  color: var(--uedp-neutral-900);
+}
+
+.uedp-live-fleet-card__map-wrap {
+  position: relative;
+  /* Figma "Maps" instance bbox: 686x272 within the card — fixed (not
+     100%) so the route/pin overlay's coordinate space matches the
+     background map image exactly, with no stretch or drift. */
+  width: 686px;
+  height: 272px;
+  overflow: hidden;
+  border-radius: 20px;
+  /* Card content area (707px) is wider than the map (686px) —
+     center it so the left/right gap either side is equal. */
+  align-self: center;
+}
+
+.uedp-live-fleet-card__map-wrap .uedp-map-view {
+  height: 100%;
+}
+
+.uedp-live-fleet-card__route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.uedp-live-fleet-card__controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}

@@ -1,0 +1,80 @@
+/* ======================================================================
+   Figma Node: 202:180 — Pagination Component Set
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-pagination {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+}
+
+/* =============================================================
+   PREV / NEXT CIRCLE BUTTONS (60×60px, r:9999)
+   ============================================================= */
+.uedp-pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.15);
+}
+
+/* State: Default — #1D4ED8 (blue-700) */
+.uedp-pagination--state-default .uedp-pagination__btn {
+  background-color: #1D4ED8; /* VariableID:1:503 (blue-700) */
+}
+
+/* State: Hovered — #1E40AF (blue-800) */
+.uedp-pagination--state-hovered .uedp-pagination__btn {
+  background-color: #1E40AF; /* VariableID:1:503 (blue-800) */
+}
+
+/* State: Focused — #1E40AF (blue-800) + 2px border #1E293B (slate-800) */
+.uedp-pagination--state-focused .uedp-pagination__btn {
+  background-color: #1E40AF; /* VariableID:1:503 (blue-800) */
+  border: 2px solid #1E293B; /* VariableID:137:1313 (slate-800) */
+}
+
+/* State: Pressed — #1E3A8A (blue-900) */
+.uedp-pagination--state-pressed .uedp-pagination__btn {
+  background-color: #1E3A8A; /* VariableID:1:503 (blue-900) */
+}
+
+/* State: Disabled — #CBD5E1 (slate-300), no shadow */
+.uedp-pagination--state-disabled .uedp-pagination__btn {
+  background-color: #CBD5E1; /* VariableID:137:1308 (slate-300) */
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.uedp-pagination__icon {
+  pointer-events: none;
+}
+
+/* =============================================================
+   PAGE NUMBER TEXT
+   ============================================================= */
+.uedp-pagination__page-number {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26.1px;
+  letter-spacing: 0;
+  color: #171717; /* VariableID:1:373 (neutral-900) */
+}
+
+.uedp-pagination--state-disabled .uedp-pagination__page-number {
+  color: #94A3B8; /* VariableID:137:1309 (slate-400) */
+}

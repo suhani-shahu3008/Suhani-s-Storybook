@@ -1,0 +1,305 @@
+/* ======================================================================
+   Figma Node: 57:7420 — Checkboxes Component Set
+   20 Variants: Type(Primary,Error) × Checked(True,False) × State(Enabled,Hovered,Focused,Pressed,Disabled)
+   All values extracted directly from Figma layers & bound variables.
+
+   DIMENSIONS:
+   - Outer touch target: 48×48px, layout VERTICAL, padding 4px all sides
+   - state-layer (halo circle): 40×40px, border-radius 100px
+   - container (visible box): 18×18px, border-radius 2px, border 2px
+   - check_small wrapper: 24×24px (absolute-positioned, centered in state-layer)
+   - check_mark (icon VECTOR): 12×9.4px, fill #FFFFFF (VariableID:1:330)
+
+   COLOR TABLE:
+   Primary / Checked=True:
+     Enabled:  fill #1D4ED8 (VariableID:1:503)
+     Hovered:  fill #1D4ED8  halo rgba(29,78,216,0.08)
+     Focused:  fill #1D4ED8  halo rgba(29,78,216,0.10)
+     Pressed:  fill #1D4ED8  halo rgba(29,78,216,0.10)
+     Disabled: fill #A3A3A3 (VariableID:1:368)
+
+   Primary / Checked=False:
+     Enabled:  stroke #404040 (VariableID:1:372)
+     Hovered:  stroke #404040  halo rgba(29,78,216,0.08)
+     Focused:  stroke #404040  halo rgba(29,78,216,0.10)
+     Pressed:  stroke #404040  halo rgba(29,78,216,0.10)
+     Disabled: stroke #A3A3A3 (VariableID:1:368)
+
+   Error / Checked=True:
+     Enabled:  fill #DC2626 (VariableID:1:392)
+     Hovered:  fill #DC2626  halo rgba(220,38,38,0.08)
+     Focused:  fill #DC2626  halo rgba(220,38,38,0.10)
+     Pressed:  fill #DC2626  halo rgba(220,38,38,0.10)
+     Disabled: fill #A3A3A3
+
+   Error / Checked=False:
+     Enabled:  stroke #DC2626 (VariableID:1:392)
+     Hovered:  stroke #DC2626  halo rgba(220,38,38,0.08)
+     Focused:  stroke #DC2626  halo rgba(220,38,38,0.10)
+     Pressed:  stroke #DC2626  halo rgba(220,38,38,0.10)
+     Disabled: stroke #A3A3A3
+   ====================================================================== */
+
+/* =============================================================
+   WRAPPER
+   ============================================================= */
+.uedp-checkbox-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+}
+
+.uedp-checkbox-wrapper:has(.uedp-checkbox--state-disabled) {
+  cursor: not-allowed;
+}
+
+/* =============================================================
+   OUTER TOUCH TARGET: 48×48px, padding 4 4 4 4
+   ============================================================= */
+.uedp-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  min-height: 48px;
+  padding: 4px;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  flex-shrink: 0;
+  /* 48px is the touch target; visible 18px glyph sits inset 15px from
+     this edge. Pull the label in by that inset so the visible gap to
+     text matches the Toggle's 12px exactly. */
+  margin-right: -15px;
+}
+
+/* Hidden native checkbox */
+.uedp-checkbox__native-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* =============================================================
+   STATE-LAYER: 40×40px, r:100  (circular halo ring)
+   ============================================================= */
+.uedp-checkbox__state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;   /* Figma: clipsContent:true — clips the Ripple VECTOR */
+  transition: background-color 0.18s ease;
+  background-color: transparent;
+}
+
+/* ── Halo fills (state-layer background) ─────────────────── */
+
+/* Primary — Hovered: rgba(29,78,216,0.08) */
+.uedp-checkbox--type-primary.uedp-checkbox--state-hovered .uedp-checkbox__state-layer {
+  background-color: rgba(29, 78, 216, 0.08);
+}
+/* Primary — Focused: rgba(29,78,216,0.10) */
+.uedp-checkbox--type-primary.uedp-checkbox--state-focused .uedp-checkbox__state-layer {
+  background-color: rgba(29, 78, 216, 0.10);
+}
+/* Primary — Pressed: rgba(29,78,216,0.10) */
+.uedp-checkbox--type-primary.uedp-checkbox--state-pressed .uedp-checkbox__state-layer {
+  background-color: rgba(29, 78, 216, 0.10);
+}
+
+/* Error — Hovered: rgba(220,38,38,0.08) */
+.uedp-checkbox--type-error.uedp-checkbox--state-hovered .uedp-checkbox__state-layer {
+  background-color: rgba(220, 38, 38, 0.08);
+}
+/* Error — Focused: rgba(220,38,38,0.10) */
+.uedp-checkbox--type-error.uedp-checkbox--state-focused .uedp-checkbox__state-layer {
+  background-color: rgba(220, 38, 38, 0.10);
+}
+/* Error — Pressed: rgba(220,38,38,0.10) */
+.uedp-checkbox--type-error.uedp-checkbox--state-pressed .uedp-checkbox__state-layer {
+  background-color: rgba(220, 38, 38, 0.10);
+}
+
+/* =============================================================
+   RIPPLE VECTOR (Pressed state only)
+   Figma node 57:7388 / 57:7334 / 57:7315 / 57:7372:
+   - absoluteBoundingBox: 50×35px
+   - absoluteRenderBounds: 40×35px  (clipped by state-layer 40×40)
+   - node-level opacity: 0.20
+   - fill color opacity: 0.80
+   - effective visual: fill-color × (0.20 × 0.80) = fill-color @ 0.16
+   ============================================================= */
+.uedp-checkbox__ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;          /* absoluteBoundingBox width */
+  height: 35px;         /* absoluteBoundingBox height */
+  border-radius: 50%;   /* ellipse — VECTOR blob in Figma */
+  pointer-events: none;
+  opacity: 0.20;        /* Figma node-level opacity: 0.20 */
+}
+
+/* Primary Ripple fill: #1D4ED8, fill opacity 0.80 */
+.uedp-checkbox--type-primary .uedp-checkbox__ripple {
+  background-color: rgba(29, 78, 216, 0.80);
+}
+
+/* Error Ripple fill: #DC2626, fill opacity 0.80 */
+.uedp-checkbox--type-error .uedp-checkbox__ripple {
+  background-color: rgba(220, 38, 38, 0.80);
+}
+
+/* =============================================================
+   CONTAINER (visible box): 18×18px, r:2, strokeWeight:2
+   ============================================================= */
+.uedp-checkbox__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  overflow: visible;
+}
+
+/* =============================================================
+   CONTAINER FILLS  (Checked=True per Type & State)
+   ============================================================= */
+
+/* Primary / Checked / Enabled → fill #1D4ED8 */
+.uedp-checkbox--type-primary.uedp-checkbox--checked.uedp-checkbox--state-enabled .uedp-checkbox__container,
+/* Primary / Checked / Hovered → fill #1D4ED8 */
+.uedp-checkbox--type-primary.uedp-checkbox--checked.uedp-checkbox--state-hovered .uedp-checkbox__container,
+/* Primary / Checked / Focused → fill #1D4ED8 */
+.uedp-checkbox--type-primary.uedp-checkbox--checked.uedp-checkbox--state-focused .uedp-checkbox__container,
+/* Primary / Checked / Pressed → fill #1D4ED8 */
+.uedp-checkbox--type-primary.uedp-checkbox--checked.uedp-checkbox--state-pressed .uedp-checkbox__container {
+  background-color: #1D4ED8;   /* VariableID:1:503 blue-700 */
+  border: none;
+}
+
+/* Primary / Checked / Disabled → fill #A3A3A3 */
+.uedp-checkbox--type-primary.uedp-checkbox--checked.uedp-checkbox--state-disabled .uedp-checkbox__container {
+  background-color: #A3A3A3;   /* VariableID:1:368 neutral-400 */
+  border: none;
+}
+
+/* Error / Checked / Enabled → fill #DC2626 */
+.uedp-checkbox--type-error.uedp-checkbox--checked.uedp-checkbox--state-enabled .uedp-checkbox__container,
+/* Error / Checked / Hovered → fill #DC2626 */
+.uedp-checkbox--type-error.uedp-checkbox--checked.uedp-checkbox--state-hovered .uedp-checkbox__container,
+/* Error / Checked / Focused → fill #DC2626 */
+.uedp-checkbox--type-error.uedp-checkbox--checked.uedp-checkbox--state-focused .uedp-checkbox__container,
+/* Error / Checked / Pressed → fill #DC2626 */
+.uedp-checkbox--type-error.uedp-checkbox--checked.uedp-checkbox--state-pressed .uedp-checkbox__container {
+  background-color: #DC2626;   /* VariableID:1:392 red-600 */
+  border: none;
+}
+
+/* Error / Checked / Disabled → fill #A3A3A3 */
+.uedp-checkbox--type-error.uedp-checkbox--checked.uedp-checkbox--state-disabled .uedp-checkbox__container {
+  background-color: #A3A3A3;   /* VariableID:1:368 */
+  border: none;
+}
+
+/* =============================================================
+   CONTAINER STROKES (Checked=False per Type & State)
+   ============================================================= */
+
+/* Primary / Unchecked / Enabled → stroke #404040 (VariableID:1:372) */
+.uedp-checkbox--type-primary.uedp-checkbox--unchecked.uedp-checkbox--state-enabled .uedp-checkbox__container,
+/* Primary / Unchecked / Hovered → stroke #404040 */
+.uedp-checkbox--type-primary.uedp-checkbox--unchecked.uedp-checkbox--state-hovered .uedp-checkbox__container,
+/* Primary / Unchecked / Focused → stroke #404040 */
+.uedp-checkbox--type-primary.uedp-checkbox--unchecked.uedp-checkbox--state-focused .uedp-checkbox__container,
+/* Primary / Unchecked / Pressed → stroke #404040 */
+.uedp-checkbox--type-primary.uedp-checkbox--unchecked.uedp-checkbox--state-pressed .uedp-checkbox__container {
+  background-color: transparent;
+  border: 2px solid #404040;   /* VariableID:1:372 neutral-700 */
+}
+
+/* Primary / Unchecked / Disabled → stroke #A3A3A3 */
+.uedp-checkbox--type-primary.uedp-checkbox--unchecked.uedp-checkbox--state-disabled .uedp-checkbox__container {
+  background-color: transparent;
+  border: 2px solid #A3A3A3;   /* VariableID:1:368 */
+}
+
+/* Error / Unchecked / Enabled → stroke #DC2626 */
+.uedp-checkbox--type-error.uedp-checkbox--unchecked.uedp-checkbox--state-enabled .uedp-checkbox__container,
+/* Error / Unchecked / Hovered */
+.uedp-checkbox--type-error.uedp-checkbox--unchecked.uedp-checkbox--state-hovered .uedp-checkbox__container,
+/* Error / Unchecked / Focused */
+.uedp-checkbox--type-error.uedp-checkbox--unchecked.uedp-checkbox--state-focused .uedp-checkbox__container,
+/* Error / Unchecked / Pressed */
+.uedp-checkbox--type-error.uedp-checkbox--unchecked.uedp-checkbox--state-pressed .uedp-checkbox__container {
+  background-color: transparent;
+  border: 2px solid #DC2626;   /* VariableID:1:392 red-600 */
+}
+
+/* Error / Unchecked / Disabled → stroke #A3A3A3 */
+.uedp-checkbox--type-error.uedp-checkbox--unchecked.uedp-checkbox--state-disabled .uedp-checkbox__container {
+  background-color: transparent;
+  border: 2px solid #A3A3A3;   /* VariableID:1:368 */
+}
+
+/* =============================================================
+   CHECK MARK (check_small INSTANCE → icon VECTOR)
+   Container: 24×24px (absolute centered), icon: 12×9.4px, fill #FFFFFF
+   ============================================================= */
+.uedp-checkbox__check-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.uedp-checkbox__check-icon {
+  width: 12px;
+  height: 9.4px;
+  min-width: 12px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* =============================================================
+   OPTIONAL LABEL TEXT
+   ============================================================= */
+.uedp-checkbox__label-text {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.88px;
+  color: #171717;   /* VariableID:1:373 neutral-900 */
+}
+
+.uedp-checkbox-wrapper:has(.uedp-checkbox--state-disabled) .uedp-checkbox__label-text {
+  color: #A3A3A3;   /* VariableID:1:368 */
+}

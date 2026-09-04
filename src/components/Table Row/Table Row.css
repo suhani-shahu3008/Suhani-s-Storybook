@@ -1,0 +1,100 @@
+/* ======================================================================
+   Figma Node: 179:1513 — Table Row Component Set
+   Variant=Row (id: 179:1485)
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+/* =============================================================
+   ROW CONTAINER
+   Figma: 1488×49px, HORIZONTAL, counterAxisAlignItems: CENTER
+   fill: none (transparent)
+   padding: T12 R36 B12 L36
+   ============================================================= */
+.uedp-tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1488px;
+  min-height: 49px;
+  padding: 12px 36px;
+  background-color: transparent;
+  box-sizing: border-box;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+}
+
+/* =============================================================
+   COLUMN CELL
+   Each cell: FILL width, HUG height, HORIZONTAL, counterAxis: CENTER
+   ============================================================= */
+.uedp-tr__cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* =============================================================
+   CELL TEXT
+   Default: Lufga 16px w400, color #171717 (VariableID:1:373)
+   Blue (Vehicle ID): Lufga 16px w400, color #1D4ED8 (VariableID:1:503)
+   ============================================================= */
+.uedp-tr__text {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.88px;
+  color: #171717; /* VariableID:1:373 */
+  white-space: nowrap;
+}
+
+.uedp-tr__text--blue {
+  color: #1D4ED8; /* VariableID:1:503 */
+}
+
+/* =============================================================
+   STATUS TAG
+   Figma Component Set 66:7719 — 50×22px, border-radius: 9999px
+   Color set via inline style per Type variant
+   ============================================================= */
+.uedp-tr__status-tag {
+  width: 50px;
+  height: 22px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+/* =============================================================
+   ACTION ICONS FRAME
+   Figma id: 179:1499 — 147×25px, HORIZONTAL, gap: 36px
+   ============================================================= */
+.uedp-tr__action-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+}
+
+/* =============================================================
+   ACTION BUTTON WRAPPER
+   Each icon: 25×25px (Figma instances 179:1500, 179:1501, 179:1502)
+   ============================================================= */
+.uedp-tr__action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.uedp-tr__action-btn:focus-visible {
+  outline: 2px solid #1D4ED8;
+  border-radius: 4px;
+}

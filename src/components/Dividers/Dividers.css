@@ -1,0 +1,35 @@
+.uedp-dividers {
+  height: 0;
+  position: relative;
+}
+
+.uedp-dividers--small {
+  width: 526px;
+}
+
+.uedp-dividers--medium {
+  width: 716px;
+}
+
+.uedp-dividers--large {
+  width: 1488px;
+}
+
+.uedp-dividers--extra-large {
+  width: 1511px;
+}
+
+.uedp-dividers__stroke {
+  bottom: -0.5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -0.5px;
+}
+
+.uedp-dividers__asset {
+  display: block;
+  height: 100%;
+  max-width: none;
+  width: 100%;
+}

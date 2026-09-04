@@ -1,0 +1,36 @@
+/* ======================================================================
+   Figma Node: 42:5063 — Maps Component (Size: Compact | Standard | Wide)
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-map-view {
+  position: relative;
+  overflow: hidden;
+  background-color: #E2E8F0;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* Size=Compact — Figma 686×272, radius 20, no shadow */
+.uedp-map-view--compact {
+  max-width: 686px;
+  aspect-ratio: 686 / 272;
+  border-radius: 20px;
+}
+
+/* Size=Standard — Figma 791×948, radius 32, shadow 4/4/10.9 rgba(0,0,0,0.25) */
+.uedp-map-view--standard {
+  max-width: 791px;
+  aspect-ratio: 791 / 948;
+  border-radius: 32px;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25);
+}
+
+/* Size=Wide — Figma 1531×531, radius 28, shadow 4/4/10.9 rgba(0,0,0,0.25) */
+.uedp-map-view--wide {
+  max-width: 1531px;
+  aspect-ratio: 1531 / 531;
+  border-radius: 28px;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25);
+}

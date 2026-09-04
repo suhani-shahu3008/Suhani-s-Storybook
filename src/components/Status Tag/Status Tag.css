@@ -1,0 +1,78 @@
+/* ======================================================================
+   Figma Node: 66:7719 — Status Tag Component Set
+   5 Variants: Type (Info, Error, Warning, Success, Inactive)
+   All values extracted directly from Figma layers & bound variables.
+
+   DIMENSIONS (all variants identical):
+   - Size: 50×22px
+   - Border Radius: 9999px (VariableID:1:582 — full pill capsule)
+   - Padding: none (no paddingLeft/Right/Top/Bottom set)
+   - Strokes: none
+   - strokeWeight: 1 (strokeAlign: INSIDE)
+   - preserveRatio: true  targetAspectRatio: {x:50, y:22}
+   - clipsContent: true
+   - No text children — pure shape component
+
+   FILL COLORS:
+   Info:     #1D4ED8  (VariableID:1:503 blue-700)
+   Error:    #DC2626  (VariableID:1:392 red-600)
+   Warning:  #F97316  (VariableID:1:402 orange-500)
+   Success:  #22C55E  (VariableID:1:446 green-500)
+   Inactive: #E4E7EB  (VariableID:1:344)
+   ====================================================================== */
+
+/* =============================================================
+   STATUS TAG — base
+   50×22px, border-radius: 9999px, no padding, no strokes
+   ============================================================= */
+.uedp-status-tag {
+  display: block;
+  width: 50px;
+  min-width: 50px;
+  height: 22px;
+  min-height: 22px;
+  border-radius: 9999px;   /* VariableID:1:582 */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;         /* clipsContent: true */
+}
+
+/* =============================================================
+   TYPE=INFO
+   fill: #1D4ED8 (VariableID:1:503 blue-700)
+   ============================================================= */
+.uedp-status-tag--type-info {
+  background-color: #1D4ED8;
+}
+
+/* =============================================================
+   TYPE=ERROR
+   fill: #DC2626 (VariableID:1:392 red-600)
+   ============================================================= */
+.uedp-status-tag--type-error {
+  background-color: #DC2626;
+}
+
+/* =============================================================
+   TYPE=WARNING
+   fill: #F97316 (r:0.976 g:0.451 b:0.086 — VariableID:1:402 orange-500)
+   ============================================================= */
+.uedp-status-tag--type-warning {
+  background-color: #F97316;
+}
+
+/* =============================================================
+   TYPE=SUCCESS
+   fill: #22C55E (VariableID:1:446 green-500)
+   ============================================================= */
+.uedp-status-tag--type-success {
+  background-color: #22C55E;
+}
+
+/* =============================================================
+   TYPE=INACTIVE
+   fill: #E4E7EB (r:0.898 g:0.906 b:0.922 — VariableID:1:344)
+   ============================================================= */
+.uedp-status-tag--type-inactive {
+  background-color: #E4E7EB;
+}

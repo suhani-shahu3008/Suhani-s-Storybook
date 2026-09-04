@@ -1,0 +1,194 @@
+/* ======================================================================
+   Figma Node: 46:5914 / 46:6245 — Radio buttons Component Set
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-radio-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+}
+
+.uedp-radio-wrapper:has(.uedp-radio--state-disabled) {
+  cursor: not-allowed;
+}
+
+/* =============================================================
+   OUTER TOUCH TARGET (48×48px)
+   ============================================================= */
+.uedp-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+  /* 48px is the touch target; visible 20px circle sits inset 14px from
+     this edge. Pull the label in by that inset so the visible gap to
+     text matches the Toggle's 12px exactly. */
+  margin-right: -14px;
+}
+
+.uedp-radio__native-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* =============================================================
+   STATE LAYER (40×40px, r:100, pad: 8px)
+   ============================================================= */
+.uedp-radio__state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 100px;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* =============================================================
+   ICON SVG (20×20px vector)
+   ============================================================= */
+.uedp-radio__svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  flex-shrink: 0;
+}
+
+.uedp-radio__circle {
+  fill: none;
+  transition: stroke 0.2s ease;
+}
+
+.uedp-radio__dot {
+  transition: fill 0.2s ease;
+}
+
+/* =============================================================
+   UNSELECTED STATES (Selected=False)
+   ============================================================= */
+/* Enabled */
+.uedp-radio--unselected.uedp-radio--state-enabled .uedp-radio__circle {
+  stroke: #737373; /* VariableID:1:369 (neutral-500) */
+}
+
+/* Hovered */
+.uedp-radio--unselected.uedp-radio--state-hovered .uedp-radio__state-layer {
+  background-color: #F5F5F5; /* VariableID:1:365 (neutral-100) */
+}
+.uedp-radio--unselected.uedp-radio--state-hovered .uedp-radio__circle {
+  stroke: #404040; /* VariableID:1:371 (neutral-700) */
+}
+
+/* Focused */
+.uedp-radio--unselected.uedp-radio--state-focused .uedp-radio__state-layer {
+  background-color: #E5E5E5; /* VariableID:1:366 (neutral-200) */
+}
+.uedp-radio--unselected.uedp-radio--state-focused .uedp-radio__circle {
+  stroke: #404040;
+}
+.uedp-radio--unselected.uedp-radio--state-focused {
+  border-radius: 100px;
+}
+
+/* Pressed */
+.uedp-radio--unselected.uedp-radio--state-pressed .uedp-radio__state-layer {
+  background-color: #EFF6FF; /* rgba(239, 246, 255, 1) / blue-50 */
+}
+.uedp-radio--unselected.uedp-radio--state-pressed .uedp-radio__circle {
+  stroke: #171717; /* VariableID:1:373 (neutral-900) */
+}
+
+/* Disabled */
+.uedp-radio--unselected.uedp-radio--state-disabled .uedp-radio__circle {
+  stroke: #A3A3A3; /* VariableID:1:368 (neutral-400) */
+}
+
+/* =============================================================
+   SELECTED STATES (Selected=True)
+   ============================================================= */
+/* Enabled */
+.uedp-radio--selected.uedp-radio--state-enabled .uedp-radio__circle {
+  stroke: #1D4ED8; /* VariableID:1:503 (blue-700) */
+}
+.uedp-radio--selected.uedp-radio--state-enabled .uedp-radio__dot {
+  fill: #1D4ED8;
+}
+
+/* Hovered */
+.uedp-radio--selected.uedp-radio--state-hovered .uedp-radio__state-layer {
+  background-color: #EFF6FF; /* blue-50 */
+}
+.uedp-radio--selected.uedp-radio--state-hovered .uedp-radio__circle {
+  stroke: #1D4ED8;
+}
+.uedp-radio--selected.uedp-radio--state-hovered .uedp-radio__dot {
+  fill: #1D4ED8;
+}
+
+/* Focused */
+.uedp-radio--selected.uedp-radio--state-focused .uedp-radio__state-layer {
+  background-color: #DBEAFE; /* rgba(219, 234, 254, 1) / blue-100 */
+}
+.uedp-radio--selected.uedp-radio--state-focused .uedp-radio__circle {
+  stroke: #1D4ED8;
+}
+.uedp-radio--selected.uedp-radio--state-focused .uedp-radio__dot {
+  fill: #1D4ED8;
+}
+
+/* Pressed */
+.uedp-radio--selected.uedp-radio--state-pressed .uedp-radio__state-layer {
+  background-color: #DBEAFE; /* blue-100 */
+}
+.uedp-radio--selected.uedp-radio--state-pressed .uedp-radio__circle {
+  stroke: #1D4ED8;
+}
+.uedp-radio--selected.uedp-radio--state-pressed .uedp-radio__dot {
+  fill: #1D4ED8;
+}
+
+/* Disabled */
+.uedp-radio--selected.uedp-radio--state-disabled .uedp-radio__circle {
+  stroke: #A3A3A3; /* VariableID:1:368 */
+}
+.uedp-radio--selected.uedp-radio--state-disabled .uedp-radio__dot {
+  fill: #A3A3A3;
+}
+
+/* =============================================================
+   OPTIONAL LABEL TEXT
+   ============================================================= */
+.uedp-radio__label-text {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.88px;
+  color: #171717; /* VariableID:1:373 */
+}
+
+.uedp-radio-wrapper:has(.uedp-radio--state-disabled) .uedp-radio__label-text {
+  color: #A3A3A3;
+}

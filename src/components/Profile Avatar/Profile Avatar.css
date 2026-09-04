@@ -1,0 +1,87 @@
+/* ======================================================================
+   Figma Node: 80:8888 — Profile Avatar (Component Set)
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-profile-avatar {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: 367px;
+  height: 88px;
+  min-width: 367px;
+  min-height: 88px;
+  padding: 14px 20px;
+  gap: 20px;
+  border-radius: 24px; /* VariableID:1:579 (cornerRadius: 24) */
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25); /* Figma effect: 9:73 */
+  box-sizing: border-box;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* =============================================================
+   STATES & BACKGROUND COLORS (Figma node 80:8888)
+   ============================================================= */
+
+/* State=Default: fill rgb(255,255,255) VariableID:1:330 */
+.uedp-profile-avatar--default {
+  background-color: #FFFFFF;
+}
+
+/* State=Hovered: fill rgb(245,245,245) VariableID:1:365 */
+.uedp-profile-avatar--hovered,
+.uedp-profile-avatar:hover {
+  background-color: #F5F5F5;
+}
+
+/* State=Focused: fill rgb(229,229,229) VariableID:1:366 */
+.uedp-profile-avatar--focused,
+.uedp-profile-avatar:focus-visible {
+  background-color: #E5E5E5;
+  outline: none;
+}
+
+/* State=Pressed: fill rgb(212,212,212) VariableID:1:367 */
+.uedp-profile-avatar--pressed,
+.uedp-profile-avatar:active {
+  background-color: #D4D4D4;
+}
+
+/* =============================================================
+   NAME AND ROLE FRAME (Figma: 133×46px, gap: 4px)
+   ============================================================= */
+.uedp-profile-avatar__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Figma TEXT "Suhani Shahu": Lufga 20px w400, color #171717 */
+.uedp-profile-avatar__name {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26.1px;
+  color: #171717; /* VariableID:1:373 (neutral-900) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Figma TEXT "Route Planner": Lufga 12px w400, color #A3A3A3 */
+.uedp-profile-avatar__role {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.66px;
+  color: #A3A3A3; /* VariableID:1:368 (neutral-400) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

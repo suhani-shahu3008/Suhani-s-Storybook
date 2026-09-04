@@ -1,0 +1,79 @@
+/* ======================================================================
+   Figma Node: 81:8976 — Icon Button Component Set (10 Variants)
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* VariableID:1:582 (circle) */
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* =============================================================
+   SIZES
+   Large: 60×60px (Icon: 30×30px)
+   Small: 30×30px (Icon: 15×15px)
+   ============================================================= */
+.uedp-icon-btn--large {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.uedp-icon-btn--small {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+/* =============================================================
+   STATES & BACKGROUND COLORS
+   ============================================================= */
+
+/* State=Default: fill rgb(255,255,255) VariableID:1:330, drop-shadow 4px 4px 10.9px rgba(0,0,0,0.15) */
+.uedp-icon-btn--default,
+.uedp-icon-btn:not([class*="uedp-icon-btn--"]):not(:hover):not(:focus):not(:active):not(:disabled) {
+  background-color: #FFFFFF;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.15);
+}
+
+/* State=Hovered: fill rgb(245,245,245) VariableID:1:365, drop-shadow 4px 4px 10.9px rgba(0,0,0,0.15) */
+.uedp-icon-btn--hovered,
+.uedp-icon-btn:hover:not(:disabled):not(.uedp-icon-btn--focused):not(.uedp-icon-btn--pressed) {
+  background-color: #F5F5F5;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.15);
+}
+
+/* State=Focused: fill rgb(229,229,229) VariableID:1:366, drop-shadow 4px 4px 10.9px rgba(0,0,0,0.15) */
+.uedp-icon-btn--focused,
+.uedp-icon-btn:focus-visible:not(:disabled) {
+  background-color: #E5E5E5;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.15);
+}
+
+/* State=Pressed: fill rgb(212,212,212) VariableID:1:367, drop-shadow 4px 4px 10.9px rgba(0,0,0,0.15) */
+.uedp-icon-btn--pressed,
+.uedp-icon-btn:active:not(:disabled) {
+  background-color: #D4D4D4;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.15);
+}
+
+/* State=Disabled: fill rgb(229,229,229) VariableID:1:366, no shadow */
+.uedp-icon-btn--disabled,
+.uedp-icon-btn:disabled {
+  background-color: #E5E5E5;
+  box-shadow: none;
+  cursor: not-allowed;
+}

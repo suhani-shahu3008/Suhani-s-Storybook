@@ -1,0 +1,949 @@
+/* ==========================================================================
+   UEDP-5 DESIGN SYSTEM TOKENS - AUTO GENERATED FROM FIGMA VARIABLES
+   ========================================================================== */
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lufga';
+  src: url('/src/assets/fonts/Lufga-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* === Typography Globals === */
+  --uedp-font-family: "Lufga", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Corrected against the real "Typography" Figma variable collection
+     (VariableCollectionId:144:90, 50 variables) — H1 was 32px (real: 40px),
+     H5 was 14px (real: 12px), H6 was 12px (real: 8px). Weight names: Semi
+     Bold=600, Medium=500, Regular=400, Light=300. Figma "Font Height" is
+     "Auto" (no explicit px), so line-height ratios are kept as before. */
+  --uedp-font-h1: 600 40px/1.25 var(--uedp-font-family); /* VariableID:144:91-95 */
+  --uedp-font-h2: 400 24px/1.3 var(--uedp-font-family); /* VariableID:144:96-100 */
+  --uedp-font-h3-medium: 500 20px/1.3 var(--uedp-font-family); /* VariableID:144:106-110 */
+  --uedp-font-h3-regular: 400 20px/1.3 var(--uedp-font-family); /* VariableID:144:101-105 */
+  --uedp-font-h4-medium: 500 16px/1.3 var(--uedp-font-family); /* VariableID:144:116-120 */
+  --uedp-font-h4-regular: 400 16px/1.3 var(--uedp-font-family); /* VariableID:144:111-115 */
+  --uedp-font-h5-medium: 500 12px/1.3 var(--uedp-font-family); /* VariableID:144:126-130 */
+  --uedp-font-h5-regular: 400 12px/1.3 var(--uedp-font-family); /* VariableID:144:121-125 */
+  --uedp-font-h6-regular: 400 8px/1.3 var(--uedp-font-family); /* VariableID:144:136-140 */
+  --uedp-font-h6-light: 300 8px/1.3 var(--uedp-font-family); /* VariableID:144:131-135 */
+  --uedp-font-caption: 300 10px/1.3 var(--uedp-font-family); /* not part of Typography collection — no contradicting data, kept as-is */
+  --uedp-font-tiny: 300 8px/1.3 var(--uedp-font-family); /* not part of Typography collection — no contradicting data, kept as-is */
+
+  /* === Base Palette Colors === */
+  --uedp-base-black: #000000; /* VariableID:137:1303 */
+  --uedp-base-white: #FFFFFF; /* VariableID:137:1304 */
+  --uedp-slate-50: #F8FAFC; /* VariableID:137:1305 */
+  --uedp-slate-100: #F1F5F9; /* VariableID:137:1306 */
+  --uedp-slate-200: #E2E8F0; /* VariableID:137:1307 */
+  --uedp-slate-300: #CBD5E1; /* VariableID:137:1308 */
+  --uedp-slate-400: #94A3B8; /* VariableID:137:1309 */
+  --uedp-slate-500: #64748B; /* VariableID:137:1310 */
+  --uedp-slate-600: #475569; /* VariableID:137:1311 */
+  --uedp-slate-700: #334155; /* VariableID:137:1312 */
+  --uedp-slate-800: #1E293B; /* VariableID:137:1313 */
+  --uedp-slate-900: #0F172A; /* VariableID:137:1314 */
+  --uedp-slate-950: #020617; /* VariableID:137:1315 */
+  --uedp-gray-50: #F9FAFB; /* VariableID:137:1316 */
+  --uedp-gray-100: #F3F4F6; /* VariableID:137:1317 */
+  --uedp-gray-200: #E5E7EB; /* VariableID:137:1318 */
+  --uedp-gray-300: #D1D5DB; /* VariableID:137:1319 */
+  --uedp-gray-400: #9CA3AF; /* VariableID:137:1320 */
+  --uedp-gray-500: #6B7280; /* VariableID:137:1321 */
+  --uedp-gray-600: #4B5563; /* VariableID:137:1322 */
+  --uedp-gray-700: #374151; /* VariableID:137:1323 */
+  --uedp-gray-800: #1F2937; /* VariableID:137:1324 */
+  --uedp-gray-900: #111827; /* VariableID:137:1325 */
+  --uedp-gray-950: #030712; /* VariableID:137:1326 */
+  --uedp-zinc-50: #FAFAFA; /* VariableID:137:1327 */
+  --uedp-zinc-100: #F4F4F5; /* VariableID:137:1328 */
+  --uedp-zinc-200: #E4E4E7; /* VariableID:137:1329 */
+  --uedp-zinc-300: #D4D4D8; /* VariableID:137:1330 */
+  --uedp-zinc-400: #A1A1AA; /* VariableID:137:1331 */
+  --uedp-zinc-500: #71717A; /* VariableID:137:1332 */
+  --uedp-zinc-600: #52525B; /* VariableID:137:1333 */
+  --uedp-zinc-700: #3F3F46; /* VariableID:137:1334 */
+  --uedp-zinc-800: #27272A; /* VariableID:137:1335 */
+  --uedp-zinc-900: #18181B; /* VariableID:137:1336 */
+  --uedp-zinc-950: #09090B; /* VariableID:137:1337 */
+  --uedp-neutral-50: #FAFAFA; /* VariableID:137:1338 */
+  --uedp-neutral-100: #F5F5F5; /* VariableID:137:1339 */
+  --uedp-neutral-200: #E5E5E5; /* VariableID:137:1340 */
+  --uedp-neutral-300: #D4D4D4; /* VariableID:137:1341 */
+  --uedp-neutral-400: #A3A3A3; /* VariableID:137:1342 */
+  --uedp-neutral-500: #737373; /* VariableID:137:1343 */
+  --uedp-neutral-600: #525252; /* VariableID:137:1344 */
+  --uedp-neutral-700: #404040; /* VariableID:137:1345 */
+  --uedp-neutral-800: #262626; /* VariableID:137:1346 */
+  --uedp-neutral-900: #171717; /* VariableID:137:1347 */
+  --uedp-neutral-950: #0A0A0A; /* VariableID:137:1348 */
+  --uedp-stone-50: #FAFAF9; /* VariableID:137:1349 */
+  --uedp-stone-100: #F5F5F4; /* VariableID:137:1350 */
+  --uedp-stone-200: #E7E5E4; /* VariableID:137:1351 */
+  --uedp-stone-300: #D6D3D1; /* VariableID:137:1352 */
+  --uedp-stone-400: #A8A29E; /* VariableID:137:1353 */
+  --uedp-stone-500: #78716C; /* VariableID:137:1354 */
+  --uedp-stone-600: #57534E; /* VariableID:137:1355 */
+  --uedp-stone-700: #44403C; /* VariableID:137:1356 */
+  --uedp-stone-800: #292524; /* VariableID:137:1357 */
+  --uedp-stone-900: #1C1917; /* VariableID:137:1358 */
+  --uedp-stone-950: #0C0A09; /* VariableID:137:1359 */
+  --uedp-red-50: #FEF2F2; /* VariableID:137:1360 */
+  --uedp-red-100: #FEE2E2; /* VariableID:137:1361 */
+  --uedp-red-200: #FECACA; /* VariableID:137:1362 */
+  --uedp-red-300: #FCA5A5; /* VariableID:137:1363 */
+  --uedp-red-400: #F87171; /* VariableID:137:1364 */
+  --uedp-red-500: #EF4444; /* VariableID:137:1365 */
+  --uedp-red-600: #DC2626; /* VariableID:137:1366 */
+  --uedp-red-700: #B91C1C; /* VariableID:137:1367 */
+  --uedp-red-800: #991B1B; /* VariableID:137:1368 */
+  --uedp-red-900: #7F1D1D; /* VariableID:137:1369 */
+  --uedp-red-950: #450A0A; /* VariableID:137:1370 */
+  --uedp-orange-50: #FFF7ED; /* VariableID:137:1371 */
+  --uedp-orange-100: #FFEDD5; /* VariableID:137:1372 */
+  --uedp-orange-200: #FED7AA; /* VariableID:137:1373 */
+  --uedp-orange-300: #FDBA74; /* VariableID:137:1374 */
+  --uedp-orange-400: #FB923C; /* VariableID:137:1375 */
+  --uedp-orange-500: #F97316; /* VariableID:137:1376 */
+  --uedp-orange-600: #EA580C; /* VariableID:137:1377 */
+  --uedp-orange-700: #C2410C; /* VariableID:137:1378 */
+  --uedp-orange-800: #9A3412; /* VariableID:137:1379 */
+  --uedp-orange-900: #7C2D12; /* VariableID:137:1380 */
+  --uedp-orange-950: #431407; /* VariableID:137:1381 */
+  --uedp-amber-50: #FFFBEB; /* VariableID:137:1382 */
+  --uedp-amber-100: #FEF3C7; /* VariableID:137:1383 */
+  --uedp-amber-200: #FDE68A; /* VariableID:137:1384 */
+  --uedp-amber-300: #FCD34D; /* VariableID:137:1385 */
+  --uedp-amber-400: #FBBF24; /* VariableID:137:1386 */
+  --uedp-amber-500: #F59E0B; /* VariableID:137:1387 */
+  --uedp-amber-600: #D97706; /* VariableID:137:1388 */
+  --uedp-amber-700: #B45309; /* VariableID:137:1389 */
+  --uedp-amber-800: #92400E; /* VariableID:137:1390 */
+  --uedp-amber-900: #78350F; /* VariableID:137:1391 */
+  --uedp-amber-950: #451A03; /* VariableID:137:1392 */
+  --uedp-yellow-50: #FEFCE8; /* VariableID:137:1393 */
+  --uedp-yellow-100: #FEF9C3; /* VariableID:137:1394 */
+  --uedp-yellow-200: #FEF08A; /* VariableID:137:1395 */
+  --uedp-yellow-300: #FDE047; /* VariableID:137:1396 */
+  --uedp-yellow-400: #FACC15; /* VariableID:137:1397 */
+  --uedp-yellow-500: #EAB308; /* VariableID:137:1398 */
+  --uedp-yellow-600: #CA8A04; /* VariableID:137:1399 */
+  --uedp-yellow-700: #A16207; /* VariableID:137:1400 */
+  --uedp-yellow-800: #854D0E; /* VariableID:137:1401 */
+  --uedp-yellow-900: #713F12; /* VariableID:137:1402 */
+  --uedp-yellow-950: #422006; /* VariableID:137:1403 */
+  --uedp-lime-50: #F7FEE7; /* VariableID:137:1404 */
+  --uedp-lime-100: #ECFCCB; /* VariableID:137:1405 */
+  --uedp-lime-200: #D9F99D; /* VariableID:137:1406 */
+  --uedp-lime-300: #BEF264; /* VariableID:137:1407 */
+  --uedp-lime-400: #A3E635; /* VariableID:137:1408 */
+  --uedp-lime-500: #84CC16; /* VariableID:137:1409 */
+  --uedp-lime-600: #65A30D; /* VariableID:137:1410 */
+  --uedp-lime-700: #4D7C0F; /* VariableID:137:1411 */
+  --uedp-lime-800: #3F6212; /* VariableID:137:1412 */
+  --uedp-lime-900: #365314; /* VariableID:137:1413 */
+  --uedp-lime-950: #111111; /* VariableID:137:1414 */
+  --uedp-green-50: #F0FDF4; /* VariableID:137:1415 */
+  --uedp-green-100: #DCFCE7; /* VariableID:137:1416 */
+  --uedp-green-200: #BBF7D0; /* VariableID:137:1417 */
+  --uedp-green-300: #86EFAC; /* VariableID:137:1418 */
+  --uedp-green-400: #4ADE80; /* VariableID:137:1419 */
+  --uedp-green-500: #22C55E; /* VariableID:137:1420 */
+  --uedp-green-600: #16A34A; /* VariableID:137:1421 */
+  --uedp-green-700: #15803D; /* VariableID:137:1422 */
+  --uedp-green-800: #166534; /* VariableID:137:1423 */
+  --uedp-green-900: #14532D; /* VariableID:137:1424 */
+  --uedp-green-950: #052E16; /* VariableID:137:1425 */
+  --uedp-emerald-50: #ECFDF5; /* VariableID:137:1426 */
+  --uedp-emerald-100: #D1FAE5; /* VariableID:137:1427 */
+  --uedp-emerald-200: #A7F3D0; /* VariableID:137:1428 */
+  --uedp-emerald-300: #6EE7B7; /* VariableID:137:1429 */
+  --uedp-emerald-400: #34D399; /* VariableID:137:1430 */
+  --uedp-emerald-500: #10B981; /* VariableID:137:1431 */
+  --uedp-emerald-600: #059669; /* VariableID:137:1432 */
+  --uedp-emerald-700: #047857; /* VariableID:137:1433 */
+  --uedp-emerald-800: #065F46; /* VariableID:137:1434 */
+  --uedp-emerald-900: #064E3B; /* VariableID:137:1435 */
+  --uedp-emerald-950: #022C22; /* VariableID:137:1436 */
+  --uedp-teal-50: #F0FDFA; /* VariableID:137:1437 */
+  --uedp-teal-100: #CCFBF1; /* VariableID:137:1438 */
+  --uedp-teal-200: #99F6E4; /* VariableID:137:1439 */
+  --uedp-teal-300: #5EEAD4; /* VariableID:137:1440 */
+  --uedp-teal-400: #2DD4BF; /* VariableID:137:1441 */
+  --uedp-teal-500: #14B8A6; /* VariableID:137:1442 */
+  --uedp-teal-600: #0D9488; /* VariableID:137:1443 */
+  --uedp-teal-700: #0F766E; /* VariableID:137:1444 */
+  --uedp-teal-800: #115E59; /* VariableID:137:1445 */
+  --uedp-teal-900: #134E4A; /* VariableID:137:1446 */
+  --uedp-teal-950: #042F2E; /* VariableID:137:1447 */
+  --uedp-cyan-50: #ECFEFF; /* VariableID:137:1448 */
+  --uedp-cyan-100: #CFFAFE; /* VariableID:137:1449 */
+  --uedp-cyan-200: #A5F3FC; /* VariableID:137:1450 */
+  --uedp-cyan-300: #67E8F9; /* VariableID:137:1451 */
+  --uedp-cyan-400: #22D3EE; /* VariableID:137:1452 */
+  --uedp-cyan-500: #06B6D4; /* VariableID:137:1453 */
+  --uedp-cyan-600: #0891B2; /* VariableID:137:1454 */
+  --uedp-cyan-700: #0E7490; /* VariableID:137:1455 */
+  --uedp-cyan-800: #155E75; /* VariableID:137:1456 */
+  --uedp-cyan-900: #164E63; /* VariableID:137:1457 */
+  --uedp-cyan-950: #083344; /* VariableID:137:1458 */
+  --uedp-sky-50: #F0F9FF; /* VariableID:137:1459 */
+  --uedp-sky-100: #E0F2FE; /* VariableID:137:1460 */
+  --uedp-sky-200: #BAE6FD; /* VariableID:137:1461 */
+  --uedp-sky-300: #7DD3FC; /* VariableID:137:1462 */
+  --uedp-sky-400: #38BDF8; /* VariableID:137:1463 */
+  --uedp-sky-500: #0EA5E9; /* VariableID:137:1464 */
+  --uedp-sky-600: #0284C7; /* VariableID:137:1465 */
+  --uedp-sky-700: #0369A1; /* VariableID:137:1466 */
+  --uedp-sky-800: #075985; /* VariableID:137:1467 */
+  --uedp-sky-900: #0C4A6E; /* VariableID:137:1468 */
+  --uedp-sky-950: #082F49; /* VariableID:137:1469 */
+  --uedp-blue-50: #EFF6FF; /* VariableID:137:1470 */
+  --uedp-blue-100: #DBEAFE; /* VariableID:137:1471 */
+  --uedp-blue-200: #BFDBFE; /* VariableID:137:1472 */
+  --uedp-blue-300: #93C5FD; /* VariableID:137:1473 */
+  --uedp-blue-400: #60A5FA; /* VariableID:137:1474 */
+  --uedp-blue-500: #3B82F6; /* VariableID:137:1475 */
+  --uedp-blue-600: #2563EB; /* VariableID:137:1476 */
+  --uedp-blue-700: #1D4ED8; /* VariableID:137:1477 */
+  --uedp-blue-800: #1E40AF; /* VariableID:137:1478 */
+  --uedp-blue-900: #1E3A8A; /* VariableID:137:1479 */
+  --uedp-blue-950: #172554; /* VariableID:137:1480 */
+  --uedp-indigo-50: #EEF2FF; /* VariableID:137:1481 */
+  --uedp-indigo-100: #E0E7FF; /* VariableID:137:1482 */
+  --uedp-indigo-200: #C7D2FE; /* VariableID:137:1483 */
+  --uedp-indigo-300: #A5B4FC; /* VariableID:137:1484 */
+  --uedp-indigo-400: #818CF8; /* VariableID:137:1485 */
+  --uedp-indigo-500: #6366F1; /* VariableID:137:1486 */
+  --uedp-indigo-600: #4F46E5; /* VariableID:137:1487 */
+  --uedp-indigo-700: #4338CA; /* VariableID:137:1488 */
+  --uedp-indigo-800: #3730A3; /* VariableID:137:1489 */
+  --uedp-indigo-900: #312E81; /* VariableID:137:1490 */
+  --uedp-indigo-950: #1E1B4B; /* VariableID:137:1491 */
+  --uedp-violet-50: #F5F3FF; /* VariableID:137:1492 */
+  --uedp-violet-100: #EDE9FE; /* VariableID:137:1493 */
+  --uedp-violet-200: #DDD6FE; /* VariableID:137:1494 */
+  --uedp-violet-300: #C4B5FD; /* VariableID:137:1495 */
+  --uedp-violet-400: #A78BFA; /* VariableID:137:1496 */
+  --uedp-violet-500: #8B5CF6; /* VariableID:137:1497 */
+  --uedp-violet-600: #7C3AED; /* VariableID:137:1498 */
+  --uedp-violet-700: #6D28D9; /* VariableID:137:1499 */
+  --uedp-violet-800: #5B21B6; /* VariableID:137:1500 */
+  --uedp-violet-900: #4C1D95; /* VariableID:137:1501 */
+  --uedp-violet-950: #2E1065; /* VariableID:137:1502 */
+  --uedp-purple-50: #FAF5FF; /* VariableID:137:1503 */
+  --uedp-purple-100: #F3E8FF; /* VariableID:137:1504 */
+  --uedp-purple-200: #E9D5FF; /* VariableID:137:1505 */
+  --uedp-purple-300: #D8B4FE; /* VariableID:137:1506 */
+  --uedp-purple-400: #C084FC; /* VariableID:137:1507 */
+  --uedp-purple-500: #A855F7; /* VariableID:137:1508 */
+  --uedp-purple-600: #9333EA; /* VariableID:137:1509 */
+  --uedp-purple-700: #7E22CE; /* VariableID:137:1510 */
+  --uedp-purple-800: #6B21A8; /* VariableID:137:1511 */
+  --uedp-purple-900: #581C87; /* VariableID:137:1512 */
+  --uedp-purple-950: #3B0764; /* VariableID:137:1513 */
+  --uedp-fuchsia-50: #FDF4FF; /* VariableID:137:1514 */
+  --uedp-fuchsia-100: #FAE8FF; /* VariableID:137:1515 */
+  --uedp-fuchsia-200: #F5D0FE; /* VariableID:137:1516 */
+  --uedp-fuchsia-300: #F0ABFC; /* VariableID:137:1517 */
+  --uedp-fuchsia-400: #E879F9; /* VariableID:137:1518 */
+  --uedp-fuchsia-500: #D946EF; /* VariableID:137:1519 */
+  --uedp-fuchsia-600: #C026D3; /* VariableID:137:1520 */
+  --uedp-fuchsia-700: #A21CAF; /* VariableID:137:1521 */
+  --uedp-fuchsia-800: #86198F; /* VariableID:137:1522 */
+  --uedp-fuchsia-900: #701A75; /* VariableID:137:1523 */
+  --uedp-fuchsia-950: #4A044E; /* VariableID:137:1524 */
+  --uedp-pink-50: #FDF2F8; /* VariableID:137:1525 */
+  --uedp-pink-100: #FCE7F3; /* VariableID:137:1526 */
+  --uedp-pink-200: #FBCFE8; /* VariableID:137:1527 */
+  --uedp-pink-300: #F9A8D4; /* VariableID:137:1528 */
+  --uedp-pink-400: #F472B6; /* VariableID:137:1529 */
+  --uedp-pink-500: #EC4899; /* VariableID:137:1530 */
+  --uedp-pink-600: #DB2777; /* VariableID:137:1531 */
+  --uedp-pink-700: #BE185D; /* VariableID:137:1532 */
+  --uedp-pink-800: #9D174D; /* VariableID:137:1533 */
+  --uedp-pink-900: #831843; /* VariableID:137:1534 */
+  --uedp-pink-950: #500724; /* VariableID:137:1535 */
+  --uedp-rose-50: #FFF1F2; /* VariableID:137:1536 */
+  --uedp-rose-100: #FFE4E6; /* VariableID:137:1537 */
+  --uedp-rose-200: #FECDD3; /* VariableID:137:1538 */
+  --uedp-rose-300: #FDA4AF; /* VariableID:137:1539 */
+  --uedp-rose-400: #FB7185; /* VariableID:137:1540 */
+  --uedp-rose-500: #F43F5E; /* VariableID:137:1541 */
+  --uedp-rose-600: #E11D48; /* VariableID:137:1542 */
+  --uedp-rose-700: #BE123C; /* VariableID:137:1543 */
+  --uedp-rose-800: #9F1239; /* VariableID:137:1544 */
+  --uedp-rose-900: #881337; /* VariableID:137:1545 */
+  --uedp-rose-950: #4C0519; /* VariableID:137:1546 */
+
+  /* === Foundational Tokens: Border Radius === */
+  --uedp-rounded-none: 0px; /* VariableID:137:1548 */
+  --uedp-rounded-sm: 2px; /* VariableID:137:1549 */
+  --uedp-rounded: 4px; /* VariableID:137:1550 */
+  --uedp-rounded-md: 6px; /* VariableID:137:1551 */
+  --uedp-rounded-lg: 8px; /* VariableID:137:1552 */
+  --uedp-rounded-xl: 12px; /* VariableID:137:1553 */
+  --uedp-rounded-2xl: 16px; /* VariableID:137:1554 */
+  --uedp-rounded-3xl: 24px; /* VariableID:137:1555 */
+  --uedp-rounded-full: 9999px; /* VariableID:137:1556 */
+  --uedp-rounded-4xl: 60px; /* VariableID:36:3591 */
+  --uedp-rounded-3xl-2: 24px; /* VariableID:36:3587 (Figma duplicate of rounded-3xl) */
+
+  /* === Foundational Tokens: Gap / Spacing === */
+  --uedp-gap-0: 0px; /* VariableID:137:1557 */
+  --uedp-gap-px: 1px; /* VariableID:137:1558 */
+  --uedp-gap-0-5: 2px; /* VariableID:137:1559 */
+  --uedp-gap-1: 4px; /* VariableID:137:1560 */
+  --uedp-gap-1-5: 6px; /* VariableID:158:1789 */
+  --uedp-gap-2: 8px; /* VariableID:137:1561 */
+  --uedp-gap-3: 12px; /* VariableID:137:1562 */
+  --uedp-gap-4: 16px; /* VariableID:137:1563 */
+  --uedp-gap-5: 20px; /* VariableID:137:1564 */
+  --uedp-gap-6: 24px; /* VariableID:137:1565 */
+  --uedp-gap-7: 28px; /* VariableID:137:1566 */
+  --uedp-gap-8: 32px; /* VariableID:137:1567 */
+  --uedp-gap-9: 36px; /* VariableID:137:1568 */
+  --uedp-gap-10: 40px; /* VariableID:137:1569 */
+  --uedp-gap-11: 44px; /* VariableID:137:1570 */
+  --uedp-gap-12: 48px; /* VariableID:137:1571 */
+  --uedp-gap-14: 56px; /* VariableID:314:34 */
+  --uedp-gap-16: 64px; /* VariableID:314:35 */
+  --uedp-gap-18: 72px; /* VariableID:394:5325 */
+  --uedp-gap-20: 80px; /* VariableID:394:5324 */
+  --uedp-gap-24: 96px; /* VariableID:394:5326 */
+  --uedp-gap-28: 112px; /* VariableID:394:5327 */
+  --uedp-gap-32: 128px; /* VariableID:394:5328 */
+  --uedp-gap-40: 160px; /* VariableID:165:1307 */
+  --uedp-gap-64: 256px; /* VariableID:394:5329 */
+
+  /* === Foundational Tokens: Padding === */
+  --uedp-p-0: 0px;
+  --uedp-padding-0: 0px; /* VariableID:459:1247 */
+  --uedp-p-0-5: 2px;
+  --uedp-padding-0-5: 2px; /* VariableID:459:1248 */
+  --uedp-p-1: 4px;
+  --uedp-padding-1: 4px; /* VariableID:459:1249 */
+  --uedp-p-1-5: 6px;
+  --uedp-padding-1-5: 6px; /* VariableID:459:1250 */
+  --uedp-p-2: 8px;
+  --uedp-padding-2: 8px; /* VariableID:459:1251 */
+  --uedp-p-2-5: 10px;
+  --uedp-padding-2-5: 10px; /* VariableID:459:1252 */
+  --uedp-p-3: 12px;
+  --uedp-padding-3: 12px; /* VariableID:459:1253 */
+  --uedp-p-3-5: 14px;
+  --uedp-padding-3-5: 14px; /* VariableID:459:1254 */
+  --uedp-p-4: 16px;
+  --uedp-padding-4: 16px; /* VariableID:459:1255 */
+  --uedp-p-5: 20px;
+  --uedp-padding-5: 20px; /* VariableID:459:1256 */
+  --uedp-p-6: 24px;
+  --uedp-padding-6: 24px; /* VariableID:459:1257 */
+  --uedp-p-7: 28px;
+  --uedp-padding-7: 28px; /* VariableID:459:1258 */
+  --uedp-p-8: 32px;
+  --uedp-padding-8: 32px; /* VariableID:459:1259 */
+  --uedp-p-9: 36px;
+  --uedp-padding-9: 36px; /* VariableID:459:1260 */
+  --uedp-p-10: 40px;
+  --uedp-padding-10: 40px; /* VariableID:459:1261 */
+  --uedp-p-11: 44px;
+  --uedp-padding-11: 44px; /* VariableID:459:1262 */
+  --uedp-p-12: 48px;
+  --uedp-padding-12: 48px; /* VariableID:459:1263 */
+
+  /* === Foundational Tokens: Opacity === */
+  --uedp-opacity-0: 0; /* VariableID:394:5330 */
+  --uedp-opacity-5: 0.05; /* VariableID:394:5331 */
+  --uedp-opacity-10: 0.1; /* VariableID:394:5332 */
+  --uedp-opacity-20: 0.2; /* VariableID:394:5333 */
+  --uedp-opacity-25: 0.25; /* VariableID:394:5334 */
+  --uedp-opacity-30: 0.3; /* VariableID:394:5335 */
+  --uedp-opacity-40: 0.4; /* VariableID:394:5336 */
+  --uedp-opacity-50: 0.5; /* VariableID:394:5337 */
+  --uedp-opacity-60: 0.6; /* VariableID:394:5338 */
+  --uedp-opacity-70: 0.7; /* VariableID:394:5339 */
+  --uedp-opacity-80: 0.8; /* VariableID:394:5340 */
+  --uedp-opacity-90: 0.9; /* VariableID:394:5341 */
+  --uedp-opacity-95: 0.95; /* VariableID:394:5342 */
+  --uedp-opacity-100: 1; /* VariableID:394:5343 */
+
+  /* === Foundational Tokens: Max-Width === */
+  --uedp-max-w-xs: 320px; /* VariableID:528:3950 */
+  --uedp-max-w-sm: 384px; /* VariableID:528:3949 */
+  --uedp-max-w-md: 448px; /* VariableID:528:3951 */
+  --uedp-max-w-lg: 512px; /* VariableID:528:3952 */
+  --uedp-max-w-xl: 576px; /* VariableID:535:5210 */
+  --uedp-max-w-2xl: 672px; /* VariableID:535:5211 */
+  --uedp-max-w-3xl: 768px; /* VariableID:535:5212 */
+  --uedp-max-w-4xl: 896px; /* VariableID:535:5213 */
+  --uedp-max-w-5xl: 1024px; /* VariableID:535:5214 */
+  --uedp-max-w-6xl: 1152px; /* VariableID:535:5215 */
+  --uedp-max-w-7xl: 1280px; /* VariableID:535:5216 */
+  --uedp-max-w-screen-sm: 640px; /* VariableID:535:5217 */
+  --uedp-max-w-screen-md: 768px; /* VariableID:535:5218 */
+  --uedp-max-w-screen-lg: 1024px; /* VariableID:535:5219 */
+  --uedp-max-w-screen-xl: 1280px; /* VariableID:535:5220 */
+  --uedp-max-w-screen-2xl: 1536px; /* VariableID:535:5221 */
+
+  /* === Semantic Palette 2 (VariableCollectionId:140:90) — Light Mode + Dark Mode === */
+  --uedp-sem2-text-primary: #171717; /* Light — Text/Primary */
+  --uedp-sem2-text-secondary: #404040; /* Light — Text/Secondary */
+  --uedp-sem2-text-tertiary: #737373; /* Light — Text/Tertiary */
+  --uedp-sem2-text-disabled: #A3A3A3; /* Light — Text/Disabled */
+  --uedp-sem2-text-placeholder: #A3A3A3; /* Light — Text/Placeholder */
+  --uedp-sem2-text-on-primary: #FFFFFF; /* Light — Text/On-Primary */
+  --uedp-sem2-text-on-surface: #171717; /* Light — Text/On-Surface */
+  --uedp-sem2-surface-page: #FAFAFA; /* Light — Surface/Page */
+  --uedp-sem2-surface-primary: #FFFFFF; /* Light — Surface/Primary */
+  --uedp-sem2-surface-secondary: #F5F5F5; /* Light — Surface/Secondary */
+  --uedp-sem2-surface-tertiary: #E5E5E5; /* Light — Surface/Tertiary */
+  --uedp-sem2-surface-elevated: #FFFFFF; /* Light — Surface/Elevated */
+  --uedp-sem2-surface-overlay: #171717; /* Light — Surface/Overlay */
+  --uedp-sem2-border-default: #E5E5E5; /* Light — Border/Default */
+  --uedp-sem2-border-subtle: #F5F5F5; /* Light — Border/Subtle */
+  --uedp-sem2-border-strong: #A3A3A3; /* Light — Border/Strong */
+  --uedp-sem2-border-focus: #1D4ED8; /* Light — Border/Focus */
+  --uedp-sem2-border-disabled: #E5E5E5; /* Light — Border/Disabled */
+  --uedp-sem2-border-selected: #1D4ED8; /* Light — Border/Selected */
+  --uedp-sem2-icon-primary: #171717; /* Light — Icon/Primary */
+  --uedp-sem2-icon-secondary: #404040; /* Light — Icon/Secondary */
+  --uedp-sem2-icon-tertiary: #737373; /* Light — Icon/Tertiary */
+  --uedp-sem2-icon-disabled: #A3A3A3; /* Light — Icon/Disabled */
+  --uedp-sem2-icon-on-primary: #FFFFFF; /* Light — Icon/On-Primary */
+  --uedp-sem2-feedback-success-background: #DCFCE7; /* Light — Feedback/Success/Background */
+  --uedp-sem2-feedback-success-text: #15803D; /* Light — Feedback/Success/Text */
+  --uedp-sem2-feedback-success-icon: #22C55E; /* Light — Feedback/Success/Icon */
+  --uedp-sem2-feedback-success-border: #22C55E; /* Light — Feedback/Success/Border */
+  --uedp-sem2-feedback-error-background: #FEE2E2; /* Light — Feedback/Error/Background */
+  --uedp-sem2-feedback-error-text: #B91C1C; /* Light — Feedback/Error/Text */
+  --uedp-sem2-feedback-error-icon: #DC2626; /* Light — Feedback/Error/Icon */
+  --uedp-sem2-feedback-error-border: #DC2626; /* Light — Feedback/Error/Border */
+  --uedp-sem2-feedback-warning-background: #FFEDD5; /* Light — Feedback/Warning/Background */
+  --uedp-sem2-feedback-warning-text: #C2410C; /* Light — Feedback/Warning/Text */
+  --uedp-sem2-feedback-warning-icon: #F97316; /* Light — Feedback/Warning/Icon */
+  --uedp-sem2-feedback-warning-border: #F97316; /* Light — Feedback/Warning/Border */
+  --uedp-sem2-feedback-info-background: #DBEAFE; /* Light — Feedback/Info/Background */
+  --uedp-sem2-feedback-info-text: #1D4ED8; /* Light — Feedback/Info/Text */
+  --uedp-sem2-feedback-info-icon: #1D4ED8; /* Light — Feedback/Info/Icon */
+  --uedp-sem2-feedback-info-border: #1D4ED8; /* Light — Feedback/Info/Border */
+  --uedp-sem2-interaction-focus: #1D4ED8; /* Light — Interaction/Focus */
+  --uedp-sem2-interaction-selection: #DBEAFE; /* Light — Interaction/Selection */
+  --uedp-sem2-interaction-link: #1D4ED8; /* Light — Interaction/Link */
+  --uedp-sem2-interaction-visited-link: #7E22CE; /* Light — Interaction/Visited Link */
+  --uedp-sem2-interaction-divider: #E5E5E5; /* Light — Interaction/Divider */
+  --uedp-sem2-interaction-overlay-scrim: #171717; /* Light — Interaction/Overlay Scrim */
+  --uedp-sem2-interaction-highlight: #FEF08A; /* Light — Interaction/Highlight */
+  --uedp-sem2-interaction-skeleton: #E5E5E5; /* Light — Interaction/Skeleton */
+  --uedp-sem2-interaction-loading: #3B82F6; /* Light — Interaction/Loading */
+  --uedp-sem2-interaction-drag-drop: #DBEAFE; /* Light — Interaction/Drag Drop */
+  --uedp-sem2-text-primary-dark: #FAFAFA; /* Dark — Text/Primary */
+  --uedp-sem2-text-secondary-dark: #D4D4D4; /* Dark — Text/Secondary */
+  --uedp-sem2-text-tertiary-dark: #A3A3A3; /* Dark — Text/Tertiary */
+  --uedp-sem2-text-disabled-dark: #525252; /* Dark — Text/Disabled */
+  --uedp-sem2-text-placeholder-dark: #737373; /* Dark — Text/Placeholder */
+  --uedp-sem2-text-on-primary-dark: #FFFFFF; /* Dark — Text/On-Primary */
+  --uedp-sem2-text-on-surface-dark: #FAFAFA; /* Dark — Text/On-Surface */
+  --uedp-sem2-surface-page-dark: #0A0A0A; /* Dark — Surface/Page */
+  --uedp-sem2-surface-primary-dark: #000000; /* Dark — Surface/Primary */
+  --uedp-sem2-surface-secondary-dark: #171717; /* Dark — Surface/Secondary */
+  --uedp-sem2-surface-tertiary-dark: #262626; /* Dark — Surface/Tertiary */
+  --uedp-sem2-surface-elevated-dark: #262626; /* Dark — Surface/Elevated */
+  --uedp-sem2-surface-overlay-dark: #0A0A0A; /* Dark — Surface/Overlay */
+  --uedp-sem2-border-default-dark: #404040; /* Dark — Border/Default */
+  --uedp-sem2-border-subtle-dark: #262626; /* Dark — Border/Subtle */
+  --uedp-sem2-border-strong-dark: #737373; /* Dark — Border/Strong */
+  --uedp-sem2-border-focus-dark: #3B82F6; /* Dark — Border/Focus */
+  --uedp-sem2-border-disabled-dark: #404040; /* Dark — Border/Disabled */
+  --uedp-sem2-border-selected-dark: #3B82F6; /* Dark — Border/Selected */
+  --uedp-sem2-icon-primary-dark: #FAFAFA; /* Dark — Icon/Primary */
+  --uedp-sem2-icon-secondary-dark: #D4D4D4; /* Dark — Icon/Secondary */
+  --uedp-sem2-icon-tertiary-dark: #A3A3A3; /* Dark — Icon/Tertiary */
+  --uedp-sem2-icon-disabled-dark: #525252; /* Dark — Icon/Disabled */
+  --uedp-sem2-icon-on-primary-dark: #FFFFFF; /* Dark — Icon/On-Primary */
+  --uedp-sem2-feedback-success-background-dark: #14532D; /* Dark — Feedback/Success/Background */
+  --uedp-sem2-feedback-success-text-dark: #86EFAC; /* Dark — Feedback/Success/Text */
+  --uedp-sem2-feedback-success-icon-dark: #4ADE80; /* Dark — Feedback/Success/Icon */
+  --uedp-sem2-feedback-success-border-dark: #22C55E; /* Dark — Feedback/Success/Border */
+  --uedp-sem2-feedback-error-background-dark: #7F1D1D; /* Dark — Feedback/Error/Background */
+  --uedp-sem2-feedback-error-text-dark: #FCA5A5; /* Dark — Feedback/Error/Text */
+  --uedp-sem2-feedback-error-icon-dark: #EF4444; /* Dark — Feedback/Error/Icon */
+  --uedp-sem2-feedback-error-border-dark: #EF4444; /* Dark — Feedback/Error/Border */
+  --uedp-sem2-feedback-warning-background-dark: #7C2D12; /* Dark — Feedback/Warning/Background */
+  --uedp-sem2-feedback-warning-text-dark: #FDBA74; /* Dark — Feedback/Warning/Text */
+  --uedp-sem2-feedback-warning-icon-dark: #FB923C; /* Dark — Feedback/Warning/Icon */
+  --uedp-sem2-feedback-warning-border-dark: #FB923C; /* Dark — Feedback/Warning/Border */
+  --uedp-sem2-feedback-info-background-dark: #1E3A8A; /* Dark — Feedback/Info/Background */
+  --uedp-sem2-feedback-info-text-dark: #93C5FD; /* Dark — Feedback/Info/Text */
+  --uedp-sem2-feedback-info-icon-dark: #3B82F6; /* Dark — Feedback/Info/Icon */
+  --uedp-sem2-feedback-info-border-dark: #3B82F6; /* Dark — Feedback/Info/Border */
+  --uedp-sem2-interaction-focus-dark: #3B82F6; /* Dark — Interaction/Focus */
+  --uedp-sem2-interaction-selection-dark: #1E3A8A; /* Dark — Interaction/Selection */
+  --uedp-sem2-interaction-link-dark: #60A5FA; /* Dark — Interaction/Link */
+  --uedp-sem2-interaction-visited-link-dark: #C084FC; /* Dark — Interaction/Visited Link */
+  --uedp-sem2-interaction-divider-dark: #404040; /* Dark — Interaction/Divider */
+  --uedp-sem2-interaction-overlay-scrim-dark: #000000; /* Dark — Interaction/Overlay Scrim */
+  --uedp-sem2-interaction-highlight-dark: #A16207; /* Dark — Interaction/Highlight */
+  --uedp-sem2-interaction-skeleton-dark: #262626; /* Dark — Interaction/Skeleton */
+  --uedp-sem2-interaction-loading-dark: #60A5FA; /* Dark — Interaction/Loading */
+  --uedp-sem2-interaction-drag-drop-dark: #1E3A8A; /* Dark — Interaction/Drag Drop */
+
+  /* === Semantic Palette / Color palette (VariableCollectionId:114:?) — 193 vars, Light + Dark === */
+  --uedp-semc-button-primary-background-active: #1D4ED8; /* Light — Button/Primary/Background/Active */
+  --uedp-semc-button-primary-background-hovered: #1E40AF; /* Light — Button/Primary/Background/Hovered */
+  --uedp-semc-button-primary-background-focused: #1D4ED8; /* Light — Button/Primary/Background/Focused */
+  --uedp-semc-button-primary-background-pressed: #1E3A8A; /* Light — Button/Primary/Background/Pressed */
+  --uedp-semc-button-primary-background-disabled: #CBD5E1; /* Light — Button/Primary/Background/Disabled */
+  --uedp-semc-button-primary-text-default: #FFFFFF; /* Light — Button/Primary/Text/Default */
+  --uedp-semc-button-primary-text-disabled: #94A3B8; /* Light — Button/Primary/Text/Disabled */
+  --uedp-semc-button-primary-border-focused: #1E293B; /* Light — Button/Primary/Border/Focused */
+  --uedp-semc-button-primary-background-error-active: #DC2626; /* Light — Button/Primary/Background/Error/Active */
+  --uedp-semc-button-primary-background-warning-active: #FB923C; /* Light — Button/Primary/Background/Warning/Active */
+  --uedp-semc-button-primary-background-success-active: #16A34A; /* Light — Button/Primary/Background/Success/Active */
+  --uedp-semc-button-primary-background-info-active: #1D4ED8; /* Light — Button/Primary/Background/Info/Active */
+  --uedp-semc-button-secondary-background-hovered: #F5F5F5; /* Light — Button/Secondary/Background/Hovered */
+  --uedp-semc-button-secondary-background-pressed: #E5E5E5; /* Light — Button/Secondary/Background/Pressed */
+  --uedp-semc-button-secondary-background-disabled: #D4D4D4; /* Light — Button/Secondary/Background/Disabled */
+  --uedp-semc-button-secondary-border-default: #64748B; /* Light — Button/Secondary/Border/Default */
+  --uedp-semc-button-secondary-border-focused: #1D4ED8; /* Light — Button/Secondary/Border/Focused */
+  --uedp-semc-button-secondary-text-default: #171717; /* Light — Button/Secondary/Text/Default */
+  --uedp-semc-button-secondary-text-disabled: #A3A3A3; /* Light — Button/Secondary/Text/Disabled */
+  --uedp-semc-icon-button-background-default: #FFFFFF; /* Light — Icon Button/Background/Default */
+  --uedp-semc-icon-button-background-hovered: #F5F5F5; /* Light — Icon Button/Background/Hovered */
+  --uedp-semc-icon-button-background-focused: #E5E5E5; /* Light — Icon Button/Background/Focused */
+  --uedp-semc-icon-button-background-pressed: #D4D4D4; /* Light — Icon Button/Background/Pressed */
+  --uedp-semc-icon-button-background-disabled: #E5E5E5; /* Light — Icon Button/Background/Disabled */
+  --uedp-semc-icon-button-icon-default: #171717; /* Light — Icon Button/Icon/Default */
+  --uedp-semc-icon-button-icon-disabled: #A3A3A3; /* Light — Icon Button/Icon/Disabled */
+  --uedp-semc-navigation-bar-background-default: #FFFFFF; /* Light — Navigation Bar/Background/Default */
+  --uedp-semc-navigation-bar-item-background-hovered: #F5F5F5; /* Light — Navigation Bar/Item/Background/Hovered */
+  --uedp-semc-navigation-bar-item-background-focused: #F1F5F9; /* Light — Navigation Bar/Item/Background/Focused */
+  --uedp-semc-navigation-bar-item-background-pressed: #F1F5F9; /* Light — Navigation Bar/Item/Background/Pressed */
+  --uedp-semc-navigation-bar-item-icon-default: #171717; /* Light — Navigation Bar/Item/Icon/Default */
+  --uedp-semc-navigation-bar-item-icon-hovered: #3B82F6; /* Light — Navigation Bar/Item/Icon/Hovered */
+  --uedp-semc-navigation-bar-item-icon-focused: #3B82F6; /* Light — Navigation Bar/Item/Icon/Focused */
+  --uedp-semc-navigation-bar-item-icon-pressed: #1D4ED8; /* Light — Navigation Bar/Item/Icon/Pressed */
+  --uedp-semc-navigation-bar-item-icon-disabled: #A3A3A3; /* Light — Navigation Bar/Item/Icon/Disabled */
+  --uedp-semc-navigation-bar-item-text-default: #171717; /* Light — Navigation Bar/Item/Text/Default */
+  --uedp-semc-navigation-bar-item-text-disabled: #A3A3A3; /* Light — Navigation Bar/Item/Text/Disabled */
+  --uedp-semc-navigation-bar-sub-menu-border-default: #171717; /* Light — Navigation Bar/Sub Menu/Border/Default */
+  --uedp-semc-search-background-default: #FFFFFF; /* Light — Search/Background/Default */
+  --uedp-semc-search-background-hovered: #F5F5F5; /* Light — Search/Background/Hovered */
+  --uedp-semc-search-background-pressed: #E5E5E5; /* Light — Search/Background/Pressed */
+  --uedp-semc-search-background-disabled: #F5F5F5; /* Light — Search/Background/Disabled */
+  --uedp-semc-search-border-default: #171717; /* Light — Search/Border/Default */
+  --uedp-semc-search-border-focused: #1D4ED8; /* Light — Search/Border/Focused */
+  --uedp-semc-search-border-error: #DC2626; /* Light — Search/Border/Error */
+  --uedp-semc-search-icon-default: #171717; /* Light — Search/Icon/Default */
+  --uedp-semc-search-icon-disabled: #A3A3A3; /* Light — Search/Icon/Disabled */
+  --uedp-semc-search-text-placeholder: #A3A3A3; /* Light — Search/Text/Placeholder */
+  --uedp-semc-search-text-default: #171717; /* Light — Search/Text/Default */
+  --uedp-semc-search-text-error: #DC2626; /* Light — Search/Text/Error */
+  --uedp-semc-search-caret-typing: #1D4ED8; /* Light — Search/Caret/Typing */
+  --uedp-semc-input-field-background-default: #FFFFFF; /* Light — Input Field/Background/Default */
+  --uedp-semc-input-field-background-hovered: #F5F5F5; /* Light — Input Field/Background/Hovered */
+  --uedp-semc-input-field-background-focused: #E5E5E5; /* Light — Input Field/Background/Focused */
+  --uedp-semc-input-field-background-pressed: #D4D4D4; /* Light — Input Field/Background/Pressed */
+  --uedp-semc-input-field-background-disabled: #F5F5F5; /* Light — Input Field/Background/Disabled */
+  --uedp-semc-input-field-border-error: #DC2626; /* Light — Input Field/Border/Error */
+  --uedp-semc-input-field-label-default: #171717; /* Light — Input Field/Label/Default */
+  --uedp-semc-input-field-label-disabled: #A3A3A3; /* Light — Input Field/Label/Disabled */
+  --uedp-semc-input-field-icon-default: #000000; /* Light — Input Field/Icon/Default */
+  --uedp-semc-input-field-icon-disabled: #A3A3A3; /* Light — Input Field/Icon/Disabled */
+  --uedp-semc-input-field-text-placeholder: #A3A3A3; /* Light — Input Field/Text/Placeholder */
+  --uedp-semc-input-field-text-filled: #171717; /* Light — Input Field/Text/Filled */
+  --uedp-semc-input-field-text-error: #DC2626; /* Light — Input Field/Text/Error */
+  --uedp-semc-input-field-caret-typing: #1D4ED8; /* Light — Input Field/Caret/Typing */
+  --uedp-semc-input-field-supporting-text-default: #1D4ED8; /* Light — Input Field/Supporting Text/Default */
+  --uedp-semc-input-field-supporting-text-error: #DC2626; /* Light — Input Field/Supporting Text/Error */
+  --uedp-semc-input-field-supporting-text-disabled: #737373; /* Light — Input Field/Supporting Text/Disabled */
+  --uedp-semc-text-field-background-default: #F5F5F5; /* Light — Text Field/Background/Default */
+  --uedp-semc-text-field-background-hovered: #E5E5E5; /* Light — Text Field/Background/Hovered */
+  --uedp-semc-text-field-background-focused: #D4D4D4; /* Light — Text Field/Background/Focused */
+  --uedp-semc-text-field-background-pressed: #A3A3A3; /* Light — Text Field/Background/Pressed */
+  --uedp-semc-text-field-background-disabled: #E5E5E5; /* Light — Text Field/Background/Disabled */
+  --uedp-semc-text-field-border-error: #DC2626; /* Light — Text Field/Border/Error */
+  --uedp-semc-text-field-label-default: #171717; /* Light — Text Field/Label/Default */
+  --uedp-semc-text-field-label-disabled: #A3A3A3; /* Light — Text Field/Label/Disabled */
+  --uedp-semc-text-field-text-placeholder: #A3A3A3; /* Light — Text Field/Text/Placeholder */
+  --uedp-semc-text-field-text-filled: #171717; /* Light — Text Field/Text/Filled */
+  --uedp-semc-text-field-text-error: #DC2626; /* Light — Text Field/Text/Error */
+  --uedp-semc-text-field-caret-typing: #1D4ED8; /* Light — Text Field/Caret/Typing */
+  --uedp-semc-text-field-supporting-text-default: #1D4ED8; /* Light — Text Field/Supporting Text/Default */
+  --uedp-semc-text-field-supporting-text-error: #DC2626; /* Light — Text Field/Supporting Text/Error */
+  --uedp-semc-text-field-supporting-text-disabled: #A3A3A3; /* Light — Text Field/Supporting Text/Disabled */
+  --uedp-semc-radio-icon-enabled-unselected: #737373; /* Light — Radio/Icon/Enabled Unselected */
+  --uedp-semc-radio-icon-hovered-unselected: #404040; /* Light — Radio/Icon/Hovered Unselected */
+  --uedp-semc-radio-icon-focused-unselected: #404040; /* Light — Radio/Icon/Focused Unselected */
+  --uedp-semc-radio-icon-pressed-unselected: #171717; /* Light — Radio/Icon/Pressed Unselected */
+  --uedp-semc-radio-icon-disabled: #A3A3A3; /* Light — Radio/Icon/Disabled */
+  --uedp-semc-radio-icon-selected: #1D4ED8; /* Light — Radio/Icon/Selected */
+  --uedp-semc-radio-state-layer-hovered-unselected: #F5F5F5; /* Light — Radio/State Layer/Hovered Unselected */
+  --uedp-semc-radio-state-layer-focused-unselected: #E5E5E5; /* Light — Radio/State Layer/Focused Unselected */
+  --uedp-semc-radio-state-layer-pressed-unselected: #EFF6FF; /* Light — Radio/State Layer/Pressed Unselected */
+  --uedp-semc-radio-state-layer-hovered-selected: #EFF6FF; /* Light — Radio/State Layer/Hovered Selected */
+  --uedp-semc-radio-state-layer-focused-selected: #DBEAFE; /* Light — Radio/State Layer/Focused Selected */
+  --uedp-semc-radio-state-layer-pressed-selected: #DBEAFE; /* Light — Radio/State Layer/Pressed Selected */
+  --uedp-semc-checkbox-border-enabled: #404040; /* Light — Checkbox/Border/Enabled */
+  --uedp-semc-checkbox-border-disabled: #A3A3A3; /* Light — Checkbox/Border/Disabled */
+  --uedp-semc-checkbox-border-error: #DC2626; /* Light — Checkbox/Border/Error */
+  --uedp-semc-checkbox-background-checked: #1D4ED8; /* Light — Checkbox/Background/Checked */
+  --uedp-semc-checkbox-background-checked-disabled: #A3A3A3; /* Light — Checkbox/Background/Checked Disabled */
+  --uedp-semc-checkbox-background-checked-error: #DC2626; /* Light — Checkbox/Background/Checked Error */
+  --uedp-semc-checkbox-icon-checked: #FFFFFF; /* Light — Checkbox/Icon/Checked */
+  --uedp-semc-toggle-track-primary-enabled: #1D4ED8; /* Light — Toggle/Track/Primary Enabled */
+  --uedp-semc-toggle-track-success-enabled: #22C55E; /* Light — Toggle/Track/Success Enabled */
+  --uedp-semc-toggle-track-disabled: #E5E5E5; /* Light — Toggle/Track/Disabled */
+  --uedp-semc-toggle-handle-default: #FFFFFF; /* Light — Toggle/Handle/Default */
+  --uedp-semc-toggle-handle-primary-active: #DBEAFE; /* Light — Toggle/Handle/Primary Active */
+  --uedp-semc-toggle-handle-success-active: #DCFCE7; /* Light — Toggle/Handle/Success Active */
+  --uedp-semc-toggle-handle-disabled: #FAFAFA; /* Light — Toggle/Handle/Disabled */
+  --uedp-semc-tag-background-info: #DBEAFE; /* Light — Tag/Background/Info */
+  --uedp-semc-tag-background-error: #FEE2E2; /* Light — Tag/Background/Error */
+  --uedp-semc-tag-background-warning: #FFEDD5; /* Light — Tag/Background/Warning */
+  --uedp-semc-tag-background-success: #DCFCE7; /* Light — Tag/Background/Success */
+  --uedp-semc-tag-background-inactive: #F5F5F5; /* Light — Tag/Background/Inactive */
+  --uedp-semc-tag-text-info: #1D4ED8; /* Light — Tag/Text/Info */
+  --uedp-semc-tag-text-error: #DC2626; /* Light — Tag/Text/Error */
+  --uedp-semc-tag-text-warning: #F97316; /* Light — Tag/Text/Warning */
+  --uedp-semc-tag-text-success: #22C55E; /* Light — Tag/Text/Success */
+  --uedp-semc-tag-text-inactive: #171717; /* Light — Tag/Text/Inactive */
+  --uedp-semc-status-tag-info: #1D4ED8; /* Light — Status Tag/Info */
+  --uedp-semc-status-tag-error: #DC2626; /* Light — Status Tag/Error */
+  --uedp-semc-status-tag-warning: #F97316; /* Light — Status Tag/Warning */
+  --uedp-semc-status-tag-success: #22C55E; /* Light — Status Tag/Success */
+  --uedp-semc-status-tag-inactive: #E5E7EB; /* Light — Status Tag/Inactive */
+  --uedp-semc-indicator-info: #1D4ED8; /* Light — Indicator/Info */
+  --uedp-semc-indicator-error: #DC2626; /* Light — Indicator/Error */
+  --uedp-semc-indicator-warning: #F97316; /* Light — Indicator/Warning */
+  --uedp-semc-indicator-success: #22C55E; /* Light — Indicator/Success */
+  --uedp-semc-indicator-inactive: #E5E7EB; /* Light — Indicator/Inactive */
+  --uedp-semc-indicator-label: #171717; /* Light — Indicator/Label */
+  --uedp-semc-divider-default: #E5E5E5; /* Light — Divider/Default */
+  --uedp-semc-process-bar-track: #EFF6FF; /* Light — Process Bar/Track */
+  --uedp-semc-process-bar-active-track: #1D4ED8; /* Light — Process Bar/Active Track */
+  --uedp-semc-process-bar-label: #171717; /* Light — Process Bar/Label */
+  --uedp-semc-table-header-background: #F5F5F5; /* Light — Table/Header/Background */
+  --uedp-semc-table-header-text: #171717; /* Light — Table/Header/Text */
+  --uedp-semc-table-row-text: #171717; /* Light — Table/Row/Text */
+  --uedp-semc-table-row-link: #1D4ED8; /* Light — Table/Row/Link */
+  --uedp-semc-table-row-icon: #A3A3A3; /* Light — Table/Row/Icon */
+  --uedp-semc-table-row-icon-error: #DC2626; /* Light — Table/Row/Icon Error */
+  --uedp-semc-card-background-default: #FFFFFF; /* Light — Card/Background/Default */
+  --uedp-semc-card-text-title: #171717; /* Light — Card/Text/Title */
+  --uedp-semc-card-text-value: #171717; /* Light — Card/Text/Value */
+  --uedp-semc-card-trend-positive: #22C55E; /* Light — Card/Trend/Positive */
+  --uedp-semc-card-trend-negative: #F97316; /* Light — Card/Trend/Negative */
+  --uedp-semc-card-icon-container-info: #EFF6FF; /* Light — Card/Icon Container/Info */
+  --uedp-semc-card-icon-container-success: #F0FDF4; /* Light — Card/Icon Container/Success */
+  --uedp-semc-card-icon-container-warning: #FFF7ED; /* Light — Card/Icon Container/Warning */
+  --uedp-semc-card-icon-info: #2563EB; /* Light — Card/Icon/Info */
+  --uedp-semc-card-icon-success: #22C55E; /* Light — Card/Icon/Success */
+  --uedp-semc-card-icon-warning: #F97316; /* Light — Card/Icon/Warning */
+  --uedp-semc-card-icon-accent: #1D4ED8; /* Light — Card/Icon/Accent */
+  --uedp-semc-tab-bar-container-background: #F3F4F6; /* Light — Tab Bar/Container/Background */
+  --uedp-semc-tab-bar-tab-active: #FFFFFF; /* Light — Tab Bar/Tab/Active */
+  --uedp-semc-tab-bar-tab-hovered: #E5E5E5; /* Light — Tab Bar/Tab/Hovered */
+  --uedp-semc-tab-bar-tab-focused: #E5E5E5; /* Light — Tab Bar/Tab/Focused */
+  --uedp-semc-tab-bar-tab-pressed: #D4D4D4; /* Light — Tab Bar/Tab/Pressed */
+  --uedp-semc-tab-bar-text-default: #171717; /* Light — Tab Bar/Text/Default */
+  --uedp-semc-tab-bar-text-disabled: #A3A3A3; /* Light — Tab Bar/Text/Disabled */
+  --uedp-semc-stepper-indicator-completed: #22C55E; /* Light — Stepper/Indicator/Completed */
+  --uedp-semc-stepper-indicator-active: #1D4ED8; /* Light — Stepper/Indicator/Active */
+  --uedp-semc-stepper-indicator-error: #DC2626; /* Light — Stepper/Indicator/Error */
+  --uedp-semc-stepper-indicator-default: #E5E5E5; /* Light — Stepper/Indicator/Default */
+  --uedp-semc-stepper-indicator-disabled: #D4D4D4; /* Light — Stepper/Indicator/Disabled */
+  --uedp-semc-stepper-icon-onindicator: #FFFFFF; /* Light — Stepper/Icon/OnIndicator */
+  --uedp-semc-stepper-track-completed: #22C55E; /* Light — Stepper/Track/Completed */
+  --uedp-semc-stepper-track-active: #1D4ED8; /* Light — Stepper/Track/Active */
+  --uedp-semc-stepper-track-error: #DC2626; /* Light — Stepper/Track/Error */
+  --uedp-semc-stepper-track-default: #E5E5E5; /* Light — Stepper/Track/Default */
+  --uedp-semc-stepper-track-disabled: #D4D4D4; /* Light — Stepper/Track/Disabled */
+  --uedp-semc-stepper-text-label: #171717; /* Light — Stepper/Text/Label */
+  --uedp-semc-stepper-text-time: #A3A3A3; /* Light — Stepper/Text/Time */
+  --uedp-semc-stepper-text-disabled: #D4D4D4; /* Light — Stepper/Text/Disabled */
+  --uedp-semc-header-background-default: #FFFFFF; /* Light — Header/Background/Default */
+  --uedp-semc-header-logo: #2563EB; /* Light — Header/Logo */
+  --uedp-semc-header-text-greeting: #171717; /* Light — Header/Text/Greeting */
+  --uedp-semc-header-text-timestamp: #A3A3A3; /* Light — Header/Text/Timestamp */
+  --uedp-semc-profile-avatar-background-default: #FFFFFF; /* Light — Profile Avatar/Background/Default */
+  --uedp-semc-profile-avatar-background-hovered: #F5F5F5; /* Light — Profile Avatar/Background/Hovered */
+  --uedp-semc-profile-avatar-background-focused: #E5E5E5; /* Light — Profile Avatar/Background/Focused */
+  --uedp-semc-profile-avatar-background-pressed: #D4D4D4; /* Light — Profile Avatar/Background/Pressed */
+  --uedp-semc-profile-avatar-text-name: #171717; /* Light — Profile Avatar/Text/Name */
+  --uedp-semc-profile-avatar-text-role: #A3A3A3; /* Light — Profile Avatar/Text/Role */
+  --uedp-semc-pagination-button-background-default: #1D4ED8; /* Light — Pagination/Button/Background/Default */
+  --uedp-semc-pagination-button-background-hovered: #1E40AF; /* Light — Pagination/Button/Background/Hovered */
+  --uedp-semc-pagination-button-background-focused: #1D4ED8; /* Light — Pagination/Button/Background/Focused */
+  --uedp-semc-pagination-button-background-pressed: #1E3A8A; /* Light — Pagination/Button/Background/Pressed */
+  --uedp-semc-pagination-button-background-disabled: #CBD5E1; /* Light — Pagination/Button/Background/Disabled */
+  --uedp-semc-pagination-button-border-focused: #1E293B; /* Light — Pagination/Button/Border/Focused */
+  --uedp-semc-pagination-icon-default: #FFFFFF; /* Light — Pagination/Icon/Default */
+  --uedp-semc-pagination-icon-disabled: #94A3B8; /* Light — Pagination/Icon/Disabled */
+  --uedp-semc-pagination-page-number-text: #171717; /* Light — Pagination/Page Number/Text */
+  --uedp-semc-pagination-records-label-text: #404040; /* Light — Pagination/Records Label/Text */
+  --uedp-semc-button-primary-background-active-dark: #2563EB; /* Dark — Button/Primary/Background/Active */
+  --uedp-semc-button-primary-background-hovered-dark: #1D4ED8; /* Dark — Button/Primary/Background/Hovered */
+  --uedp-semc-button-primary-background-focused-dark: #2563EB; /* Dark — Button/Primary/Background/Focused */
+  --uedp-semc-button-primary-background-pressed-dark: #1E40AF; /* Dark — Button/Primary/Background/Pressed */
+  --uedp-semc-button-primary-background-disabled-dark: #334155; /* Dark — Button/Primary/Background/Disabled */
+  --uedp-semc-button-primary-text-default-dark: #FFFFFF; /* Dark — Button/Primary/Text/Default */
+  --uedp-semc-button-primary-text-disabled-dark: #64748B; /* Dark — Button/Primary/Text/Disabled */
+  --uedp-semc-button-primary-border-focused-dark: #E2E8F0; /* Dark — Button/Primary/Border/Focused */
+  --uedp-semc-button-primary-background-error-active-dark: #EF4444; /* Dark — Button/Primary/Background/Error/Active */
+  --uedp-semc-button-primary-background-warning-active-dark: #FDBA74; /* Dark — Button/Primary/Background/Warning/Active */
+  --uedp-semc-button-primary-background-success-active-dark: #22C55E; /* Dark — Button/Primary/Background/Success/Active */
+  --uedp-semc-button-primary-background-info-active-dark: #2563EB; /* Dark — Button/Primary/Background/Info/Active */
+  --uedp-semc-button-secondary-background-hovered-dark: #262626; /* Dark — Button/Secondary/Background/Hovered */
+  --uedp-semc-button-secondary-background-pressed-dark: #404040; /* Dark — Button/Secondary/Background/Pressed */
+  --uedp-semc-button-secondary-background-disabled-dark: #525252; /* Dark — Button/Secondary/Background/Disabled */
+  --uedp-semc-button-secondary-border-default-dark: #94A3B8; /* Dark — Button/Secondary/Border/Default */
+  --uedp-semc-button-secondary-border-focused-dark: #3B82F6; /* Dark — Button/Secondary/Border/Focused */
+  --uedp-semc-button-secondary-text-default-dark: #FAFAFA; /* Dark — Button/Secondary/Text/Default */
+  --uedp-semc-button-secondary-text-disabled-dark: #737373; /* Dark — Button/Secondary/Text/Disabled */
+  --uedp-semc-icon-button-background-default-dark: #000000; /* Dark — Icon Button/Background/Default */
+  --uedp-semc-icon-button-background-hovered-dark: #262626; /* Dark — Icon Button/Background/Hovered */
+  --uedp-semc-icon-button-background-focused-dark: #404040; /* Dark — Icon Button/Background/Focused */
+  --uedp-semc-icon-button-background-pressed-dark: #525252; /* Dark — Icon Button/Background/Pressed */
+  --uedp-semc-icon-button-background-disabled-dark: #404040; /* Dark — Icon Button/Background/Disabled */
+  --uedp-semc-icon-button-icon-default-dark: #FAFAFA; /* Dark — Icon Button/Icon/Default */
+  --uedp-semc-icon-button-icon-disabled-dark: #737373; /* Dark — Icon Button/Icon/Disabled */
+  --uedp-semc-navigation-bar-background-default-dark: #000000; /* Dark — Navigation Bar/Background/Default */
+  --uedp-semc-navigation-bar-item-background-hovered-dark: #262626; /* Dark — Navigation Bar/Item/Background/Hovered */
+  --uedp-semc-navigation-bar-item-background-focused-dark: #1E293B; /* Dark — Navigation Bar/Item/Background/Focused */
+  --uedp-semc-navigation-bar-item-background-pressed-dark: #1E293B; /* Dark — Navigation Bar/Item/Background/Pressed */
+  --uedp-semc-navigation-bar-item-icon-default-dark: #FAFAFA; /* Dark — Navigation Bar/Item/Icon/Default */
+  --uedp-semc-navigation-bar-item-icon-hovered-dark: #60A5FA; /* Dark — Navigation Bar/Item/Icon/Hovered */
+  --uedp-semc-navigation-bar-item-icon-focused-dark: #60A5FA; /* Dark — Navigation Bar/Item/Icon/Focused */
+  --uedp-semc-navigation-bar-item-icon-pressed-dark: #2563EB; /* Dark — Navigation Bar/Item/Icon/Pressed */
+  --uedp-semc-navigation-bar-item-icon-disabled-dark: #737373; /* Dark — Navigation Bar/Item/Icon/Disabled */
+  --uedp-semc-navigation-bar-item-text-default-dark: #FAFAFA; /* Dark — Navigation Bar/Item/Text/Default */
+  --uedp-semc-navigation-bar-item-text-disabled-dark: #737373; /* Dark — Navigation Bar/Item/Text/Disabled */
+  --uedp-semc-navigation-bar-sub-menu-border-default-dark: #FAFAFA; /* Dark — Navigation Bar/Sub Menu/Border/Default */
+  --uedp-semc-search-background-default-dark: #000000; /* Dark — Search/Background/Default */
+  --uedp-semc-search-background-hovered-dark: #262626; /* Dark — Search/Background/Hovered */
+  --uedp-semc-search-background-pressed-dark: #404040; /* Dark — Search/Background/Pressed */
+  --uedp-semc-search-background-disabled-dark: #262626; /* Dark — Search/Background/Disabled */
+  --uedp-semc-search-border-default-dark: #FAFAFA; /* Dark — Search/Border/Default */
+  --uedp-semc-search-border-focused-dark: #2563EB; /* Dark — Search/Border/Focused */
+  --uedp-semc-search-border-error-dark: #EF4444; /* Dark — Search/Border/Error */
+  --uedp-semc-search-icon-default-dark: #FAFAFA; /* Dark — Search/Icon/Default */
+  --uedp-semc-search-icon-disabled-dark: #737373; /* Dark — Search/Icon/Disabled */
+  --uedp-semc-search-text-placeholder-dark: #737373; /* Dark — Search/Text/Placeholder */
+  --uedp-semc-search-text-default-dark: #FAFAFA; /* Dark — Search/Text/Default */
+  --uedp-semc-search-text-error-dark: #EF4444; /* Dark — Search/Text/Error */
+  --uedp-semc-search-caret-typing-dark: #2563EB; /* Dark — Search/Caret/Typing */
+  --uedp-semc-input-field-background-default-dark: #000000; /* Dark — Input Field/Background/Default */
+  --uedp-semc-input-field-background-hovered-dark: #262626; /* Dark — Input Field/Background/Hovered */
+  --uedp-semc-input-field-background-focused-dark: #404040; /* Dark — Input Field/Background/Focused */
+  --uedp-semc-input-field-background-pressed-dark: #525252; /* Dark — Input Field/Background/Pressed */
+  --uedp-semc-input-field-background-disabled-dark: #262626; /* Dark — Input Field/Background/Disabled */
+  --uedp-semc-input-field-border-error-dark: #EF4444; /* Dark — Input Field/Border/Error */
+  --uedp-semc-input-field-label-default-dark: #FAFAFA; /* Dark — Input Field/Label/Default */
+  --uedp-semc-input-field-label-disabled-dark: #737373; /* Dark — Input Field/Label/Disabled */
+  --uedp-semc-input-field-icon-default-dark: #FFFFFF; /* Dark — Input Field/Icon/Default */
+  --uedp-semc-input-field-icon-disabled-dark: #737373; /* Dark — Input Field/Icon/Disabled */
+  --uedp-semc-input-field-text-placeholder-dark: #737373; /* Dark — Input Field/Text/Placeholder */
+  --uedp-semc-input-field-text-filled-dark: #FAFAFA; /* Dark — Input Field/Text/Filled */
+  --uedp-semc-input-field-text-error-dark: #EF4444; /* Dark — Input Field/Text/Error */
+  --uedp-semc-input-field-caret-typing-dark: #2563EB; /* Dark — Input Field/Caret/Typing */
+  --uedp-semc-input-field-supporting-text-default-dark: #2563EB; /* Dark — Input Field/Supporting Text/Default */
+  --uedp-semc-input-field-supporting-text-error-dark: #EF4444; /* Dark — Input Field/Supporting Text/Error */
+  --uedp-semc-input-field-supporting-text-disabled-dark: #A3A3A3; /* Dark — Input Field/Supporting Text/Disabled */
+  --uedp-semc-text-field-background-default-dark: #262626; /* Dark — Text Field/Background/Default */
+  --uedp-semc-text-field-background-hovered-dark: #404040; /* Dark — Text Field/Background/Hovered */
+  --uedp-semc-text-field-background-focused-dark: #525252; /* Dark — Text Field/Background/Focused */
+  --uedp-semc-text-field-background-pressed-dark: #737373; /* Dark — Text Field/Background/Pressed */
+  --uedp-semc-text-field-background-disabled-dark: #404040; /* Dark — Text Field/Background/Disabled */
+  --uedp-semc-text-field-border-error-dark: #EF4444; /* Dark — Text Field/Border/Error */
+  --uedp-semc-text-field-label-default-dark: #FAFAFA; /* Dark — Text Field/Label/Default */
+  --uedp-semc-text-field-label-disabled-dark: #737373; /* Dark — Text Field/Label/Disabled */
+  --uedp-semc-text-field-text-placeholder-dark: #737373; /* Dark — Text Field/Text/Placeholder */
+  --uedp-semc-text-field-text-filled-dark: #FAFAFA; /* Dark — Text Field/Text/Filled */
+  --uedp-semc-text-field-text-error-dark: #EF4444; /* Dark — Text Field/Text/Error */
+  --uedp-semc-text-field-caret-typing-dark: #2563EB; /* Dark — Text Field/Caret/Typing */
+  --uedp-semc-text-field-supporting-text-default-dark: #2563EB; /* Dark — Text Field/Supporting Text/Default */
+  --uedp-semc-text-field-supporting-text-error-dark: #EF4444; /* Dark — Text Field/Supporting Text/Error */
+  --uedp-semc-text-field-supporting-text-disabled-dark: #737373; /* Dark — Text Field/Supporting Text/Disabled */
+  --uedp-semc-radio-icon-enabled-unselected-dark: #A3A3A3; /* Dark — Radio/Icon/Enabled Unselected */
+  --uedp-semc-radio-icon-hovered-unselected-dark: #D4D4D4; /* Dark — Radio/Icon/Hovered Unselected */
+  --uedp-semc-radio-icon-focused-unselected-dark: #D4D4D4; /* Dark — Radio/Icon/Focused Unselected */
+  --uedp-semc-radio-icon-pressed-unselected-dark: #FAFAFA; /* Dark — Radio/Icon/Pressed Unselected */
+  --uedp-semc-radio-icon-disabled-dark: #737373; /* Dark — Radio/Icon/Disabled */
+  --uedp-semc-radio-icon-selected-dark: #2563EB; /* Dark — Radio/Icon/Selected */
+  --uedp-semc-radio-state-layer-hovered-unselected-dark: #262626; /* Dark — Radio/State Layer/Hovered Unselected */
+  --uedp-semc-radio-state-layer-focused-unselected-dark: #404040; /* Dark — Radio/State Layer/Focused Unselected */
+  --uedp-semc-radio-state-layer-pressed-unselected-dark: #172554; /* Dark — Radio/State Layer/Pressed Unselected */
+  --uedp-semc-radio-state-layer-hovered-selected-dark: #172554; /* Dark — Radio/State Layer/Hovered Selected */
+  --uedp-semc-radio-state-layer-focused-selected-dark: #1E3A8A; /* Dark — Radio/State Layer/Focused Selected */
+  --uedp-semc-radio-state-layer-pressed-selected-dark: #1E3A8A; /* Dark — Radio/State Layer/Pressed Selected */
+  --uedp-semc-checkbox-border-enabled-dark: #D4D4D4; /* Dark — Checkbox/Border/Enabled */
+  --uedp-semc-checkbox-border-disabled-dark: #737373; /* Dark — Checkbox/Border/Disabled */
+  --uedp-semc-checkbox-border-error-dark: #EF4444; /* Dark — Checkbox/Border/Error */
+  --uedp-semc-checkbox-background-checked-dark: #2563EB; /* Dark — Checkbox/Background/Checked */
+  --uedp-semc-checkbox-background-checked-disabled-dark: #737373; /* Dark — Checkbox/Background/Checked Disabled */
+  --uedp-semc-checkbox-background-checked-error-dark: #EF4444; /* Dark — Checkbox/Background/Checked Error */
+  --uedp-semc-checkbox-icon-checked-dark: #FFFFFF; /* Dark — Checkbox/Icon/Checked */
+  --uedp-semc-toggle-track-primary-enabled-dark: #2563EB; /* Dark — Toggle/Track/Primary Enabled */
+  --uedp-semc-toggle-track-success-enabled-dark: #4ADE80; /* Dark — Toggle/Track/Success Enabled */
+  --uedp-semc-toggle-track-disabled-dark: #404040; /* Dark — Toggle/Track/Disabled */
+  --uedp-semc-toggle-handle-default-dark: #FFFFFF; /* Dark — Toggle/Handle/Default */
+  --uedp-semc-toggle-handle-primary-active-dark: #BFDBFE; /* Dark — Toggle/Handle/Primary Active */
+  --uedp-semc-toggle-handle-success-active-dark: #BBF7D0; /* Dark — Toggle/Handle/Success Active */
+  --uedp-semc-toggle-handle-disabled-dark: #525252; /* Dark — Toggle/Handle/Disabled */
+  --uedp-semc-tag-background-info-dark: #1E3A8A; /* Dark — Tag/Background/Info */
+  --uedp-semc-tag-background-error-dark: #7F1D1D; /* Dark — Tag/Background/Error */
+  --uedp-semc-tag-background-warning-dark: #7C2D12; /* Dark — Tag/Background/Warning */
+  --uedp-semc-tag-background-success-dark: #14532D; /* Dark — Tag/Background/Success */
+  --uedp-semc-tag-background-inactive-dark: #262626; /* Dark — Tag/Background/Inactive */
+  --uedp-semc-tag-text-info-dark: #93C5FD; /* Dark — Tag/Text/Info */
+  --uedp-semc-tag-text-error-dark: #FCA5A5; /* Dark — Tag/Text/Error */
+  --uedp-semc-tag-text-warning-dark: #FDBA74; /* Dark — Tag/Text/Warning */
+  --uedp-semc-tag-text-success-dark: #86EFAC; /* Dark — Tag/Text/Success */
+  --uedp-semc-tag-text-inactive-dark: #FAFAFA; /* Dark — Tag/Text/Inactive */
+  --uedp-semc-status-tag-info-dark: #2563EB; /* Dark — Status Tag/Info */
+  --uedp-semc-status-tag-error-dark: #EF4444; /* Dark — Status Tag/Error */
+  --uedp-semc-status-tag-warning-dark: #FB923C; /* Dark — Status Tag/Warning */
+  --uedp-semc-status-tag-success-dark: #4ADE80; /* Dark — Status Tag/Success */
+  --uedp-semc-status-tag-inactive-dark: #4B5563; /* Dark — Status Tag/Inactive */
+  --uedp-semc-indicator-info-dark: #2563EB; /* Dark — Indicator/Info */
+  --uedp-semc-indicator-error-dark: #EF4444; /* Dark — Indicator/Error */
+  --uedp-semc-indicator-warning-dark: #FB923C; /* Dark — Indicator/Warning */
+  --uedp-semc-indicator-success-dark: #4ADE80; /* Dark — Indicator/Success */
+  --uedp-semc-indicator-inactive-dark: #4B5563; /* Dark — Indicator/Inactive */
+  --uedp-semc-indicator-label-dark: #FAFAFA; /* Dark — Indicator/Label */
+  --uedp-semc-divider-default-dark: #404040; /* Dark — Divider/Default */
+  --uedp-semc-process-bar-track-dark: #172554; /* Dark — Process Bar/Track */
+  --uedp-semc-process-bar-active-track-dark: #2563EB; /* Dark — Process Bar/Active Track */
+  --uedp-semc-process-bar-label-dark: #FAFAFA; /* Dark — Process Bar/Label */
+  --uedp-semc-table-header-background-dark: #262626; /* Dark — Table/Header/Background */
+  --uedp-semc-table-header-text-dark: #FAFAFA; /* Dark — Table/Header/Text */
+  --uedp-semc-table-row-text-dark: #FAFAFA; /* Dark — Table/Row/Text */
+  --uedp-semc-table-row-link-dark: #2563EB; /* Dark — Table/Row/Link */
+  --uedp-semc-table-row-icon-dark: #737373; /* Dark — Table/Row/Icon */
+  --uedp-semc-table-row-icon-error-dark: #EF4444; /* Dark — Table/Row/Icon Error */
+  --uedp-semc-card-background-default-dark: #000000; /* Dark — Card/Background/Default */
+  --uedp-semc-card-text-title-dark: #FAFAFA; /* Dark — Card/Text/Title */
+  --uedp-semc-card-text-value-dark: #FAFAFA; /* Dark — Card/Text/Value */
+  --uedp-semc-card-trend-positive-dark: #4ADE80; /* Dark — Card/Trend/Positive */
+  --uedp-semc-card-trend-negative-dark: #FB923C; /* Dark — Card/Trend/Negative */
+  --uedp-semc-card-icon-container-info-dark: #172554; /* Dark — Card/Icon Container/Info */
+  --uedp-semc-card-icon-container-success-dark: #052E16; /* Dark — Card/Icon Container/Success */
+  --uedp-semc-card-icon-container-warning-dark: #431407; /* Dark — Card/Icon Container/Warning */
+  --uedp-semc-card-icon-info-dark: #3B82F6; /* Dark — Card/Icon/Info */
+  --uedp-semc-card-icon-success-dark: #4ADE80; /* Dark — Card/Icon/Success */
+  --uedp-semc-card-icon-warning-dark: #FB923C; /* Dark — Card/Icon/Warning */
+  --uedp-semc-card-icon-accent-dark: #2563EB; /* Dark — Card/Icon/Accent */
+  --uedp-semc-tab-bar-container-background-dark: #1F2937; /* Dark — Tab Bar/Container/Background */
+  --uedp-semc-tab-bar-tab-active-dark: #000000; /* Dark — Tab Bar/Tab/Active */
+  --uedp-semc-tab-bar-tab-hovered-dark: #404040; /* Dark — Tab Bar/Tab/Hovered */
+  --uedp-semc-tab-bar-tab-focused-dark: #404040; /* Dark — Tab Bar/Tab/Focused */
+  --uedp-semc-tab-bar-tab-pressed-dark: #525252; /* Dark — Tab Bar/Tab/Pressed */
+  --uedp-semc-tab-bar-text-default-dark: #FAFAFA; /* Dark — Tab Bar/Text/Default */
+  --uedp-semc-tab-bar-text-disabled-dark: #737373; /* Dark — Tab Bar/Text/Disabled */
+  --uedp-semc-stepper-indicator-completed-dark: #4ADE80; /* Dark — Stepper/Indicator/Completed */
+  --uedp-semc-stepper-indicator-active-dark: #2563EB; /* Dark — Stepper/Indicator/Active */
+  --uedp-semc-stepper-indicator-error-dark: #EF4444; /* Dark — Stepper/Indicator/Error */
+  --uedp-semc-stepper-indicator-default-dark: #404040; /* Dark — Stepper/Indicator/Default */
+  --uedp-semc-stepper-indicator-disabled-dark: #525252; /* Dark — Stepper/Indicator/Disabled */
+  --uedp-semc-stepper-icon-onindicator-dark: #FFFFFF; /* Dark — Stepper/Icon/OnIndicator */
+  --uedp-semc-stepper-track-completed-dark: #4ADE80; /* Dark — Stepper/Track/Completed */
+  --uedp-semc-stepper-track-active-dark: #2563EB; /* Dark — Stepper/Track/Active */
+  --uedp-semc-stepper-track-error-dark: #EF4444; /* Dark — Stepper/Track/Error */
+  --uedp-semc-stepper-track-default-dark: #404040; /* Dark — Stepper/Track/Default */
+  --uedp-semc-stepper-track-disabled-dark: #525252; /* Dark — Stepper/Track/Disabled */
+  --uedp-semc-stepper-text-label-dark: #FAFAFA; /* Dark — Stepper/Text/Label */
+  --uedp-semc-stepper-text-time-dark: #737373; /* Dark — Stepper/Text/Time */
+  --uedp-semc-stepper-text-disabled-dark: #525252; /* Dark — Stepper/Text/Disabled */
+  --uedp-semc-header-background-default-dark: #000000; /* Dark — Header/Background/Default */
+  --uedp-semc-header-logo-dark: #3B82F6; /* Dark — Header/Logo */
+  --uedp-semc-header-text-greeting-dark: #FAFAFA; /* Dark — Header/Text/Greeting */
+  --uedp-semc-header-text-timestamp-dark: #737373; /* Dark — Header/Text/Timestamp */
+  --uedp-semc-profile-avatar-background-default-dark: #000000; /* Dark — Profile Avatar/Background/Default */
+  --uedp-semc-profile-avatar-background-hovered-dark: #262626; /* Dark — Profile Avatar/Background/Hovered */
+  --uedp-semc-profile-avatar-background-focused-dark: #404040; /* Dark — Profile Avatar/Background/Focused */
+  --uedp-semc-profile-avatar-background-pressed-dark: #525252; /* Dark — Profile Avatar/Background/Pressed */
+  --uedp-semc-profile-avatar-text-name-dark: #FAFAFA; /* Dark — Profile Avatar/Text/Name */
+  --uedp-semc-profile-avatar-text-role-dark: #737373; /* Dark — Profile Avatar/Text/Role */
+  --uedp-semc-pagination-button-background-default-dark: #2563EB; /* Dark — Pagination/Button/Background/Default */
+  --uedp-semc-pagination-button-background-hovered-dark: #1D4ED8; /* Dark — Pagination/Button/Background/Hovered */
+  --uedp-semc-pagination-button-background-focused-dark: #2563EB; /* Dark — Pagination/Button/Background/Focused */
+  --uedp-semc-pagination-button-background-pressed-dark: #1E40AF; /* Dark — Pagination/Button/Background/Pressed */
+  --uedp-semc-pagination-button-background-disabled-dark: #334155; /* Dark — Pagination/Button/Background/Disabled */
+  --uedp-semc-pagination-button-border-focused-dark: #E2E8F0; /* Dark — Pagination/Button/Border/Focused */
+  --uedp-semc-pagination-icon-default-dark: #FFFFFF; /* Dark — Pagination/Icon/Default */
+  --uedp-semc-pagination-icon-disabled-dark: #64748B; /* Dark — Pagination/Icon/Disabled */
+  --uedp-semc-pagination-page-number-text-dark: #F5F5F5; /* Dark — Pagination/Page Number/Text */
+  --uedp-semc-pagination-records-label-text-dark: #D4D4D4; /* Dark — Pagination/Records Label/Text */
+
+  /* === Figma Shadows & Effects === */
+  --uedp-shadow-primary: 0px 4px 14px rgba(0, 0, 0, 0.08);
+  --uedp-shadow-secondary: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  --uedp-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 6px 16px rgba(0, 0, 0, 0.04);
+  --uedp-shadow-modal: 0px 10px 30px rgba(0, 0, 0, 0.12);
+}

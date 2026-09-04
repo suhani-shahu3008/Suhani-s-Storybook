@@ -1,0 +1,95 @@
+/* ======================================================================
+   Figma Node: 88:10691 — Cards Component Set
+   All values extracted directly from Figma layers & bound variables.
+   ====================================================================== */
+
+.uedp-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 367px;
+  min-width: 367px;
+  height: 145px;
+  min-height: 145px;
+  padding: 12px 20px;
+  background-color: #FFFFFF;
+  border-radius: 24px; /* VariableID:1:582 */
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25); /* Figma effect: 9:73 */
+  box-sizing: border-box;
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.uedp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+/* =============================================================
+   LEFT SIDE OF CARD (gap: 28px, vertical)
+   ============================================================= */
+.uedp-card__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Figma TEXT "Title": Lufga 20px w400, color #171717 */
+.uedp-card__title {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #171717; /* VariableID:1:373 (neutral-900) */
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Data Frame: gap 6px, vertical */
+.uedp-card__data {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Figma TEXT "Value": Lufga 20px w500, color #171717 */
+.uedp-card__value {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #171717; /* VariableID:1:373 */
+  margin: 0;
+  padding: 0;
+}
+
+/* Figma TEXT "Change": Lufga 12px w400 */
+.uedp-card__change {
+  font-family: var(--uedp-font-family, 'Lufga', sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.66px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* =============================================================
+   RIGHT SIDE — CARD ICON BOX (r:12)
+   ============================================================= */
+.uedp-card__icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,68 @@
+/* Delivery trends card.css — Figma Node ID: 88:11240 */
+.uedp-delivery-trends-card {
+  width: 402px;
+  box-sizing: border-box;
+  background: var(--uedp-base-white);
+  border-radius: 24px; /* Figma cornerRadius */
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25); /* Figma DROP_SHADOW */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--uedp-font-family);
+}
+
+.uedp-delivery-trends-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uedp-delivery-trends-card__title {
+  margin: 0;
+  font: var(--uedp-font-h3-regular); /* Lufga 400 20px/1.3 = Figma 20px/26.1px */
+  color: var(--uedp-neutral-900); /* #171717 */
+}
+
+.uedp-delivery-trends-card__legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uedp-delivery-trends-card__chart {
+  display: flex;
+  gap: 8px;
+  height: 220px;
+}
+
+.uedp-delivery-trends-card__yaxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--uedp-neutral-900);
+}
+
+.uedp-delivery-trends-card__plot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.uedp-delivery-trends-card__svg {
+  flex: 1;
+  width: 100%;
+}
+
+.uedp-delivery-trends-card__xaxis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--uedp-neutral-900);
+}

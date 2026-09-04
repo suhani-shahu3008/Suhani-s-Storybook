@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Figma Node ID: 71:7902 - Component Set: "Process bar"
+   Exact Layer Styles & Bound Variables
+   ========================================================================== */
+
+/* Outer Component: "Process bar" (id: 71:7902)
+   - Layout: VERTICAL
+   - Item Spacing: 12px (var(--uedp-gap-3))
+   - Width: 628px / 100%
+   - Height: 38px
+*/
+.uedp-process-bar-71-7902 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: var(--uedp-gap-3, 12px);
+  width: 100%;
+  max-width: 628px;
+  box-sizing: border-box;
+  font-family: var(--uedp-font-family);
+}
+
+/* Layer: "Header" (id: 71:7826)
+   - Layout: HORIZONTAL (SPACE_BETWEEN)
+   - Height: 16px
+*/
+.uedp-process-bar__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 16px;
+  line-height: 16px;
+}
+
+/* Layer: "Process" (id: 71:7827)
+   - Font Family: Lufga / Inter
+   - Font Size: 12px
+   - Font Weight: 400 (Regular)
+   - Line Height: 15.66px
+   - Color: VariableID:1:373 -> var(--uedp-neutral-900, #171717)
+*/
+.uedp-process-bar__process-label {
+  font-family: var(--uedp-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--uedp-neutral-900, #171717);
+  letter-spacing: 0;
+  user-select: none;
+}
+
+/* Layer: "[Percentage]" (id: 71:7828)
+   - Font Family: Lufga
+   - Font Size: 12px
+   - Font Weight: 400 (Regular)
+   - Color: VariableID:1:373 -> var(--uedp-neutral-900, #171717)
+*/
+.uedp-process-bar__percent-label {
+  font-family: var(--uedp-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--uedp-neutral-900, #171717);
+  text-align: right;
+  letter-spacing: 0;
+  user-select: none;
+}
+
+/* Layer: "Track" (id: 71:7829)
+   - Height: 10px
+   - Corner Radius: 9999px (VariableID:1:582 -> var(--uedp-rounded-full))
+   - Fill: VariableID:1:496 -> var(--uedp-blue-50, #EFF6FF)
+   - Layout: VERTICAL / Center
+*/
+.uedp-process-bar__track {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background-color: var(--uedp-blue-50, #EFF6FF);
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Layer: "Active Track" (id: 71:7830)
+   - Height: 10px
+   - Corner Radius: 9999px (VariableID:1:582 -> var(--uedp-rounded-full))
+   - Fill: VariableID:1:503 -> var(--uedp-blue-700, #1D4ED8)
+*/
+.uedp-process-bar__active-track {
+  height: 100%;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background-color: var(--uedp-blue-700, #1D4ED8);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

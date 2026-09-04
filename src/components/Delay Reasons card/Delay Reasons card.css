@@ -1,0 +1,51 @@
+/* Delay Reasons card.css — Figma Node ID: 88:11239 */
+.uedp-delay-reasons-card {
+  width: 400px;
+  box-sizing: border-box;
+  background: var(--uedp-base-white);
+  border-radius: 24px;
+  box-shadow: 4px 4px 10.9px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--uedp-font-family);
+}
+
+.uedp-delay-reasons-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.uedp-delay-reasons-card__title {
+  margin: 0;
+  font: var(--uedp-font-h3-regular);
+  color: var(--uedp-neutral-900);
+}
+
+/* Figma groups all 4 legend items (Traffic, Vehicle Issue, Weather, Other)
+   into a tight 2x2 grid next to the title, not split above/below the
+   donut — row 1: Traffic/Vehicle Issue, row 2: Weather/Other. */
+.uedp-delay-reasons-card__legend {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 4px;
+  column-gap: 16px;
+}
+
+.uedp-delay-reasons-card__pie-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.uedp-delay-reasons-card__pie {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  /* Figma arcData innerRadius ≈ 0.7142 -> ring thickness ≈ 28.6% of radius */
+  mask: radial-gradient(farthest-side, transparent calc(71.42% - 1px), #000 71.42%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(71.42% - 1px), #000 71.42%);
+}
