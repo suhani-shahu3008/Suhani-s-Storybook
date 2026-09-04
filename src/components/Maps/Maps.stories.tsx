@@ -14,6 +14,6 @@ type Story = StoryObj<typeof Maps>;
 
 export const Default: Story = {
   args: {
-    size: 'Standard'
+    size: "Compact"
   }
 };
