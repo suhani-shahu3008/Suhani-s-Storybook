@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suhani-storybook.vercel.app/sitemap.xml
